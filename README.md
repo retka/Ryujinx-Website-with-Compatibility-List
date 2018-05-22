@@ -1,6 +1,4 @@
-# ryujinx_router
-
-> RyujiNX Website with Vue-Router support
+# Ryujinx Website
 
 ## Build Setup
 
