@@ -40,6 +40,7 @@
 			<v-btn flat href="https://github.com/gdkchan/Ryujinx/wiki">Wiki</v-btn>
 			<v-btn flat exact :to="{ name: 'Build' }">Build</v-btn>
 			<v-btn flat exact :to="{ name: 'Contribute' }">Contribute</v-btn>
+			<v-btn flat exact :to="{ name: 'Compatibility' }">Compatibility</v-btn>
 
 			<v-btn flat color="green" href="https://github.com/gdkchan/Ryujinx"><v-icon left>fab fa-github</v-icon>GitHub</v-btn>
 			<v-btn flat color="blue" href="https://discord.gg/VkQYXAZ"><v-icon left>fab fa-discord</v-icon>Discord</v-btn>

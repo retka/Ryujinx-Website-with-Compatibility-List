@@ -41,7 +41,7 @@
 									Please consider reporting it via our Discord server. 
 									</p>
 
-									<v-btn dark color="blue" target="_blank" href="https://github.com/gdkchan/Ryujinx/wiki/Games-Compatibility-List">
+									<v-btn dark color="blue" :to="{ name: 'Compatibility' }">
 										<v-icon left>fas fa-list</v-icon>
 										Game compatibility list
 									</v-btn>

@@ -5,6 +5,7 @@ import News from '@/components/News';
 import Contribute from '@/components/Contribute';
 import Build from '@/components/Build';
 import BuildNetCore from '@/components/Build.Net_Core';
+import Compatibility from '@/components/Compatibility';
 
 Vue.use(Router);
 
@@ -34,6 +35,11 @@ export default new Router({
 			path: '/Build/NetCore',
 			name: 'BuildNetCore',
 			component: BuildNetCore
+		},
+		{
+			path: '/Compatibility',
+			name: 'Compatibility',
+			component: Compatibility
 		}
 	]
 });

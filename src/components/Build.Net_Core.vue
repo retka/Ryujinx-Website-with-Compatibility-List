@@ -13,7 +13,7 @@
 							<div class="text-xs-center">
 								<p class="display-1">Building RyujiNX <small>(Windows only for now)</small>:</p>
 								<p class="headline"><em>
-									Support for OSX and Linux is limited and not really recommended for use as of late.</br>
+									Support for OSX and Linux is limited and not really recommended for use as of late.<br>
 									To get started; you will need the .NET Core 2.0 or greater runtime installed.
 								</em></p>
 								<span class="subheading">
