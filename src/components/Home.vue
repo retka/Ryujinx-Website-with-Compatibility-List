@@ -239,7 +239,7 @@ export default {
 
 	methods: {
 		async fetchTeamMembers () {
-			let _t = await fetch('https://cors-anywhere.herokuapp.com/https://gitlab.com/Lordmau5/RyujiNX-Website-Public/raw/master/team/team.json');
+			let _t = await fetch('https://ryujinx.org/public/team.json');
 			this.team = await _t.json();
 
 			this.loading = false;

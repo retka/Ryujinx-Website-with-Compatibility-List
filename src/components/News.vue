@@ -103,7 +103,7 @@ export default {
 
 	methods: {
 		async fetchArticles () {
-			let _a = await fetch('https://cors-anywhere.herokuapp.com/https://gitlab.com/Lordmau5/RyujiNX-Website-Public/raw/master/articles/articles.json');
+			let _a = await fetch('https://ryujinx.org/public/articles.json');
 			this.articles = await _a.json();
 
 			this.loading = false;
