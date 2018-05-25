@@ -8,7 +8,7 @@
 					justify-center
 					class="text-xs-center"
 				>
-					<img src="@/assets/logo.png" alt="RyujiNX" class="mb-5" />
+					<img src="@/assets/logo.png" alt="Ryujinx" class="mb-5" />
 					<p class="display-1">A simple, experimental Nintendo Switch emulator.</p>
 					<p class="caption">Information and content is subject to change.</p>
 				</v-layout>
@@ -25,7 +25,7 @@
 					<v-layout row wrap align-start justify-center>
 						<v-flex xs12 md6>
 							<div class="text-xs-center">
-								<p class="display-1">What is RyujiNX?</p>
+								<p class="display-1">What is Ryujinx?</p>
 								<span class="subheading">
 									<small>
 										<em>(REE-YOU-JI-NX)</em>
@@ -33,7 +33,7 @@
 									
 									<p class="my-2">It is a Nintendo Switch Emulator programmed in C#; unlike most emulators that are created with C++ or C.
 									This emulator aims to offer good performance, a friendly interface, and consistent builds.
-									RyujiNX is created by user gdkchan over at the GBAtemp forums.
+									Ryujinx is created by user gdkchan over at the GBAtemp forums.
 									This emulator is also available on GitHub, and is licensed under the "Unlicensed" license.</p>
 
 									<p class="my-2">Note: This emulator is not capable (as of now) of running Commercial Nintendo Switch games!
@@ -42,7 +42,7 @@
 									</p>
 
 									<v-btn dark color="blue" :to="{ name: 'Compatibility' }">
-										<v-icon left>fas fa-list</v-icon>
+										<v-icon left>fas fa-gamepad</v-icon>
 										Game compatibility list
 									</v-btn>
 									<v-btn dark color="red" :to="{ name: 'Build' }">
@@ -99,7 +99,7 @@
 									<div class="display-1 text-xs-center">Gaming?</div>
 								</v-card-title>
 								<v-card-text class="text-xs-center">
-									RyujiNX currently doesn't work well with games as of now.
+									Ryujinx currently doesn't work well with games as of now.
 									Much like 'yuzu,' it only supports homebrew at the moment.
 								</v-card-text>
 							</v-card>
@@ -126,7 +126,7 @@
 									<div class="display-1 text-xs-center">Platforms</div>
 								</v-card-title>
 								<v-card-text class="text-xs-center">
-									RyujiNX is currently only available for Windows.
+									Ryujinx is currently only available for Windows.
 									Although, support for Linux, and macOS is there;
 									but it may be more difficult to compile it.
 								</v-card-text>
@@ -141,7 +141,7 @@
 									<div class="display-1 text-xs-center">Discord</div>
 								</v-card-title>
 								<v-card-text class="text-xs-center">
-									Join the RyujiNX Discord server; you can get help,
+									Join the Ryujinx Discord server; you can get help,
 									as well as converse with fellow users and developers.
 									Join here.
 								</v-card-text>
@@ -156,7 +156,7 @@
 									<div class="display-1 text-xs-center">Why the name?</div>
 								</v-card-title>
 								<v-card-text class="text-xs-center">
-									The name RyujiNX is based on the name "Ryujin."
+									The name Ryujinx is based on the name "Ryujin."
 									In other words, a name for a Mythical (Sea-God) Dragon.
 									More information can be found here. 
 									The name stems from Ryu (as already explained), then RyuJIT;

@@ -11,7 +11,7 @@
 					<v-layout row wrap align-start justify-center>
 						<v-flex xs12 md6>
 							<div class="text-xs-center">
-								<p class="display-1">Building RyujiNX and latest downloads</p>
+								<p class="display-1">Building Ryujinx and latest downloads</p>
 								<img class="text-xs-center" width="100%" src="@/assets/shell.png">
 								<span class="subheading">
 									<v-layout row wrap align-start justify-center>

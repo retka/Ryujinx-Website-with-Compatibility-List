@@ -11,7 +11,7 @@
 					<v-layout row wrap align-start justify-center>
 						<v-flex xs12 md6>
 							<div class="text-xs-center">
-								<p class="display-1">Building RyujiNX <small>(Windows only for now)</small>:</p>
+								<p class="display-1">Building Ryujinx <small>(Windows only for now)</small>:</p>
 								<p class="headline"><em>
 									Support for OSX and Linux is limited and not really recommended for use as of late.<br>
 									To get started; you will need the .NET Core 2.0 or greater runtime installed.
@@ -36,7 +36,7 @@
 										<v-flex xs12>
 											<p class="mt-4 title">Step three:</p>
 											<p>
-												Build the App using a Command prompt in the ROOT directory. You can quickly access it by Holding shift in explorer (in the RyujiNX directory) then right clicking,
+												Build the App using a Command prompt in the ROOT directory. You can quickly access it by Holding shift in explorer (in the Ryujinx directory) then right clicking,
 												and typing the following command~ "dotnet publish -c Release -f win10-x64".
 												The build directory is "root/bin/release/etc/etc."
 											</p>

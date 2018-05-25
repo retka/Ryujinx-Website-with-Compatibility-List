@@ -1,19 +1,5 @@
 <template>
 	<div>
-		<!-- <section>
-			<v-parallax :src="require('@/assets/wallp.png')" height="200">
-				<v-layout
-					column
-					align-center
-					justify-center
-					class="text-xs-center"
-				>
-					<img src="@/assets/logo.png" alt="RyujiNX" class="mb-5" />
-					<p class="display-1">A simple, experimental Nintendo Switch emulator.</p>
-					<p class="caption">Information and content is subject to change.</p>
-				</v-layout>
-			</v-parallax>
-		</section> -->
 		<section>
 			<v-layout
 				column
