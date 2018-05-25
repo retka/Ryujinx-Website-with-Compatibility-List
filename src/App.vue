@@ -29,6 +29,9 @@
 			<v-btn flat exact :to="{ name: 'Contribute' }">
 				<v-icon>fas fa-code</v-icon>
 			</v-btn>
+			<v-btn flat exact :to="{ name: 'Compatibility' }">
+				<v-icon>fas fa-gamepad</v-icon>
+			</v-btn>
 
 			<v-btn flat color="green" href="https://github.com/gdkchan/Ryujinx"><v-icon>fab fa-github</v-icon></v-btn>
 			<v-btn flat color="blue" href="https://discord.gg/VkQYXAZ"><v-icon>fab fa-discord</v-icon></v-btn>
@@ -102,6 +105,14 @@
           <v-list-tile-title>Contribute</v-list-tile-title>
         </v-list-tile>
 
+        <!-- Game Compatibility -->
+        <v-list-tile exact :to="{ name: 'Compatibility' }">
+          <v-list-tile-action>
+            <v-icon>fas fa-gamepad</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title>Game Compatibility</v-list-tile-title>
+        </v-list-tile>
+
         <v-divider></v-divider>
 
         <!-- GitHub -->
@@ -150,7 +161,7 @@ export default {
 		return {
 			dark: localStorage.dark_mode === 'true',
 			drawer: false,
-			title: 'RyujiNX - Switch Emulator'
+			title: 'Ryujinx - Switch Emulator'
 		};
 	},
 	methods: {
