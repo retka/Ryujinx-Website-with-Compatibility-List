@@ -14,13 +14,13 @@
 								<p class="display-1">Building Ryujinx <small>(Windows only for now)</small>:</p>
 								<p class="headline"><em>
 									Support for OSX and Linux is limited and not really recommended for use as of late.<br>
-									To get started; you will need the .NET Core 2.0 or greater runtime installed.
+									To get started; you will need the .NET Core 2.1 RC1 or greater runtime installed.
 								</em></p>
 								<span class="subheading">
 									<v-layout row wrap align-start justify-center>
 										<v-flex xs12>
 											<p class="mt-4 title">Step one:</p>
-											<p>Download NET Core, <a href="https://www.microsoft.com/net/learn/get-started/linuxredhat" target="_blank">here</a>. Then install the SDK.</p>
+											<p>Download NET Core <a href="https://www.microsoft.com/net/download/dotnet-core/sdk-2.1.300-rc1" target="_blank">here</a>. Then install the SDK.</p>
 										</v-flex>
 										<v-flex xs12 md6>
 											<p class="mt-4 title">Step two (Variant one):</p>
@@ -37,7 +37,7 @@
 											<p class="mt-4 title">Step three:</p>
 											<p>
 												Build the App using a Command prompt in the ROOT directory. You can quickly access it by Holding shift in explorer (in the Ryujinx directory) then right clicking,
-												and typing the following command~ "dotnet publish -c Release -f win10-x64".
+												and typing the following command <code>dotnet publish -c Release -r win10-x64</code>.
 												The build directory is "root/bin/release/etc/etc."
 											</p>
 										</v-flex>
