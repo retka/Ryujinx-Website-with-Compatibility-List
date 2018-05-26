@@ -32,9 +32,12 @@
 							</td>
 							<td>{{ props.item.name }}</td>
 							<td>{{ props.item.title_id.join(', ') }}</td>
+							<td>{{ props.item.state_emu_version }}</td>
+							<td>{{ props.item.nickname }}</td>
 							<td>{{ props.item.state }}</td>
 							<td>
 								<vue-markdown :source="props.item.comment"></vue-markdown>
+								<div v-if="props.item.screen_url"><em>Click for more information</em></div>
 							</td>
 							<td>{{ props.item.state_last_date }}</td>
 						</tr>
@@ -88,6 +91,14 @@ export default {
 				{
 					text: 'Title IDs',
 					value: 'title_id'
+				},
+				{
+					text: 'Commit',
+					value: 'state_emu_version'
+				},
+				{
+					text: 'Tester',
+					value: 'nickname'
 				},
 				{
 					text: 'State',
