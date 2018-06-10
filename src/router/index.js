@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/components/Home';
-import News from '@/components/News';
 import Contribute from '@/components/Contribute';
 import Build from '@/components/Build';
 import BuildNetCore from '@/components/Build.Net_Core';
@@ -15,11 +14,6 @@ export default new Router({
 			path: '/',
 			name: 'Home',
 			component: Home
-		},
-		{
-			path: '/news',
-			name: 'News',
-			component: News
 		},
 		{
 			path: '/contribute',

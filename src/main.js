@@ -6,7 +6,12 @@ import router from './router';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 
-Vue.use(Vuetify);
+Vue.use(Vuetify, {
+	theme: {
+		ryu_blue: '#00C4E1',
+		ryu_orange: '#FF5E5B'
+	}
+});
 
 Vue.config.productionTip = false;
 

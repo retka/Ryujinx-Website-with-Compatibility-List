@@ -17,14 +17,14 @@
 									<v-layout row wrap align-start justify-center>
 										<v-flex xs12 md6>
 											<p class="mt-4 title">Building methods</p>
-											<v-btn dark color="blue" :to="{ name: 'BuildNetCore' }">
+											<v-btn dark color="ryu_blue" :to="{ name: 'BuildNetCore' }">
 												<v-icon left>fas fa-code</v-icon>
 												.NET Core
 											</v-btn>
 										</v-flex>
 										<v-flex xs12 md6>
 											<p class="mt-4 title">Automatically compiled builds</p>
-											<v-btn dark color="red" target="_blank" :href="downloadURL">
+											<v-btn dark color="ryu_orange" target="_blank" :href="downloadURL">
 												<v-icon left>fas fa-download</v-icon>
 												Download for <v-icon class="mx-1">fab fa-windows</v-icon> ({{ version }})
 											</v-btn>

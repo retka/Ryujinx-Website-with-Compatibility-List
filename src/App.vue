@@ -17,11 +17,11 @@
 			<v-btn flat exact :to="{ name: 'Home' }">
 				<v-icon>fas fa-home</v-icon>
 			</v-btn>
-			<v-btn flat exact :to="{ name: 'News' }">
+			<v-btn flat href="https://blog.ryujinx.org/">
 				<v-icon>fas fa-newspaper</v-icon>
 			</v-btn>
 			<v-btn flat href="https://github.com/gdkchan/Ryujinx/wiki">
-				<v-icon>fas fa-lemon</v-icon>
+				<v-icon>fas fa-globe</v-icon>
 			</v-btn>
 			<v-btn flat exact :to="{ name: 'Build' }">
 				<v-icon>fas fa-database</v-icon>
@@ -34,20 +34,22 @@
 			</v-btn>
 
 			<v-btn flat color="green" href="https://github.com/gdkchan/Ryujinx"><v-icon>fab fa-github</v-icon></v-btn>
+			<v-btn flat color="red" href="https://yt.ryujinx.org/"><v-icon>fab fa-youtube</v-icon></v-btn>
 			<v-btn flat color="blue" href="https://discord.gg/VkQYXAZ"><v-icon>fab fa-discord</v-icon></v-btn>
 			<v-btn flat color="red" href="https://www.reddit.com/r/Ryujinx"><v-icon>fab fa-reddit</v-icon></v-btn>
 		</v-toolbar-items>
 		<v-toolbar-items class="hidden-md-and-down">
 			<v-btn flat exact :to="{ name: 'Home' }">Home</v-btn>
-			<v-btn flat exact :to="{ name: 'News' }">News</v-btn>
+			<v-btn flat href="https://blog.ryujinx.org/">Blog</v-btn>
 			<v-btn flat href="https://github.com/gdkchan/Ryujinx/wiki">Wiki</v-btn>
 			<v-btn flat exact :to="{ name: 'Build' }">Build</v-btn>
 			<v-btn flat exact :to="{ name: 'Contribute' }">Contribute</v-btn>
 			<v-btn flat exact :to="{ name: 'Compatibility' }">Compatibility</v-btn>
 
-			<v-btn flat color="green" href="https://github.com/gdkchan/Ryujinx"><v-icon left>fab fa-github</v-icon>GitHub</v-btn>
-			<v-btn flat color="blue" href="https://discord.gg/VkQYXAZ"><v-icon left>fab fa-discord</v-icon>Discord</v-btn>
-			<v-btn flat color="red" href="https://www.reddit.com/r/Ryujinx"><v-icon left>fab fa-reddit</v-icon>Reddit</v-btn>
+			<v-btn flat color="green" href="https://github.com/gdkchan/Ryujinx"><v-icon>fab fa-github</v-icon></v-btn>
+			<v-btn flat color="red" href="https://yt.ryujinx.org/"><v-icon>fab fa-youtube</v-icon></v-btn>
+			<v-btn flat color="blue" href="https://discord.gg/VkQYXAZ"><v-icon>fab fa-discord</v-icon></v-btn>
+			<v-btn flat color="red" href="https://www.reddit.com/r/Ryujinx"><v-icon>fab fa-reddit</v-icon></v-btn>
 		</v-toolbar-items>
 		<v-toolbar-items class="ml-0 mr-2">
 			<v-btn flat @click.stop="toggleDarkMode()">
@@ -74,17 +76,17 @@
         </v-list-tile>
 
         <!-- News -->
-        <v-list-tile exact :to="{ name: 'News' }">
+        <v-list-tile href="https://blog.ryujinx.org/">
           <v-list-tile-action>
             <v-icon>fas fa-newspaper</v-icon>
           </v-list-tile-action>
-          <v-list-tile-title>News</v-list-tile-title>
+          <v-list-tile-title>Blog</v-list-tile-title>
         </v-list-tile>
 
         <!-- Wiki -->
         <v-list-tile href="https://github.com/gdkchan/Ryujinx/wiki">
           <v-list-tile-action>
-            <v-icon>fas fa-lemon</v-icon>
+            <v-icon>fas fa-globe</v-icon>
           </v-list-tile-action>
           <v-list-tile-title>Wiki</v-list-tile-title>
         </v-list-tile>
@@ -123,6 +125,14 @@
           <v-list-tile-title>GitHub</v-list-tile-title>
         </v-list-tile>
 
+        <!-- YouTube -->
+        <v-list-tile color="red" href="https://yt.ryujinx.org/">
+          <v-list-tile-action>
+            <v-icon color="red">fab fa-youtube</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title>YouTube</v-list-tile-title>
+        </v-list-tile>
+
         <!-- Discord -->
         <v-list-tile color="blue" href="https://discord.gg/VkQYXAZ">
           <v-list-tile-action>
@@ -151,6 +161,12 @@
 <style scoped>
 	.btn {
 		min-width: 0;
+	}
+</style>
+
+<style>
+	a {
+		color: #00C4E1;
 	}
 </style>
 
