@@ -17,7 +17,7 @@
 									It doesn't matter what you're good at. If you have any skills that you think would be useful in the development,
 									please do contact us through our Discord.</p>
 									<v-btn
-										href="https://discordapp.com/invite/SNDWTz"
+										href="https://discord.gg/VkQYXAZ"
 										target="_blank"
 										dark
 										color="blue"

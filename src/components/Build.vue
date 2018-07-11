@@ -54,7 +54,7 @@ export default {
 
 	methods: {
 		async fetchDownloadURL () {
-			let _f 	= await fetch('https://ci.appveyor.com/api/projects/gdkchan/ryujinx');
+			let _f 	= await fetch('https://ci.appveyor.com/api/projects/gdkchan/ryujinx/branch/master');
 			let json = await _f.json();
 
 			this.version = json.build.version;
