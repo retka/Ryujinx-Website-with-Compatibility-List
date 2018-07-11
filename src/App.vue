@@ -20,9 +20,6 @@
 			<v-btn flat href="https://blog.ryujinx.org/">
 				<v-icon>fas fa-newspaper</v-icon>
 			</v-btn>
-			<v-btn flat href="https://github.com/gdkchan/Ryujinx/wiki">
-				<v-icon>fas fa-globe</v-icon>
-			</v-btn>
 			<v-btn flat exact :to="{ name: 'Build' }">
 				<v-icon>fas fa-database</v-icon>
 			</v-btn>
@@ -33,7 +30,7 @@
 				<v-icon>fas fa-gamepad</v-icon>
 			</v-btn>
 
-			<v-btn flat color="green" href="https://github.com/gdkchan/Ryujinx"><v-icon>fab fa-github</v-icon></v-btn>
+			<v-btn flat color="green" href="https://github.com/Ryujinx/Ryujinx"><v-icon>fab fa-github</v-icon></v-btn>
 			<v-btn flat color="red" href="https://yt.ryujinx.org/"><v-icon>fab fa-youtube</v-icon></v-btn>
 			<v-btn flat color="blue" href="https://discord.gg/VkQYXAZ"><v-icon>fab fa-discord</v-icon></v-btn>
 			<v-btn flat color="red" href="https://www.reddit.com/r/Ryujinx"><v-icon>fab fa-reddit</v-icon></v-btn>
@@ -41,12 +38,11 @@
 		<v-toolbar-items class="hidden-md-and-down">
 			<v-btn flat exact :to="{ name: 'Home' }">Home</v-btn>
 			<v-btn flat href="https://blog.ryujinx.org/">Blog</v-btn>
-			<v-btn flat href="https://github.com/gdkchan/Ryujinx/wiki">Wiki</v-btn>
 			<v-btn flat exact :to="{ name: 'Build' }">Build</v-btn>
 			<v-btn flat exact :to="{ name: 'Contribute' }">Contribute</v-btn>
 			<v-btn flat exact :to="{ name: 'Compatibility' }">Compatibility</v-btn>
 
-			<v-btn flat color="green" href="https://github.com/gdkchan/Ryujinx"><v-icon>fab fa-github</v-icon></v-btn>
+			<v-btn flat color="green" href="https://github.com/Ryujinx/Ryujinx"><v-icon>fab fa-github</v-icon></v-btn>
 			<v-btn flat color="red" href="https://yt.ryujinx.org/"><v-icon>fab fa-youtube</v-icon></v-btn>
 			<v-btn flat color="blue" href="https://discord.gg/VkQYXAZ"><v-icon>fab fa-discord</v-icon></v-btn>
 			<v-btn flat color="red" href="https://www.reddit.com/r/Ryujinx"><v-icon>fab fa-reddit</v-icon></v-btn>
@@ -83,14 +79,6 @@
           <v-list-tile-title>Blog</v-list-tile-title>
         </v-list-tile>
 
-        <!-- Wiki -->
-        <v-list-tile href="https://github.com/gdkchan/Ryujinx/wiki">
-          <v-list-tile-action>
-            <v-icon>fas fa-globe</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Wiki</v-list-tile-title>
-        </v-list-tile>
-
         <!-- Build -->
         <v-list-tile exact :to="{ name: 'Build' }">
           <v-list-tile-action>
@@ -118,7 +106,7 @@
         <v-divider></v-divider>
 
         <!-- GitHub -->
-        <v-list-tile color="green" href="https://github.com/gdkchan/Ryujinx">
+        <v-list-tile color="green" href="https://github.com/Ryujinx/Ryujinx">
           <v-list-tile-action>
             <v-icon color="green">fab fa-github</v-icon>
           </v-list-tile-action>
