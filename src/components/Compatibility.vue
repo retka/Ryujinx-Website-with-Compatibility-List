@@ -39,7 +39,7 @@
 								<vue-markdown :source="props.item.comment"></vue-markdown>
 								<div v-if="props.item.screen_url"><em>Click for more information</em></div>
 							</td>
-							<td>{{ props.item.state_last_date }}</td>
+							<td>{{ props.item.state_last_date_fmt }} ({{ props.item.state_last_date }})</td>
 						</tr>
 					</template>
 					<template slot="expand" slot-scope="props">
@@ -67,6 +67,7 @@
 
 <script>
 import VueMarkdown from 'vue-markdown';
+import moment from 'moment';
 
 export default {
 	components: {
@@ -110,7 +111,7 @@ export default {
 				},
 				{
 					text: 'Last Test Date',
-					value: 'state_last_date'
+					value: 'state_last_date_ts'
 				}
 			]
 		};
@@ -118,8 +119,31 @@ export default {
 
 	methods: {
 		async fetchGames () {
+			this.games.length = 0;
+
 			let _fetch = await fetch('https://ryujinx.org/public/CompatibilityList.json');
-			this.games = await _fetch.json();
+
+			const json = await _fetch.json();
+			for (const game of json) {
+				// this.games.push(game);
+				this.games.push({
+					boxart_url: game.boxart_url,
+					comment: game.comment,
+					name: game.name,
+					nickname: game.nickname,
+					screen_url: game.screen_url,
+					state: game.state,
+					state_emu_version: game.state_emu_version,
+					state_last_date: game.state_last_date,
+					state_last_date_fmt: moment(game.state_last_date, 'DD/MM/YYYY').fromNow(),
+					state_last_date_ts: moment(game.state_last_date, 'DD/MM/YYYY').valueOf(),
+					title_id: game.title_id
+				});
+				console.log(game.state_last_date);
+			}
+
+			console.log(this.games);
+
 			this.loading = false;
 		}
 	},

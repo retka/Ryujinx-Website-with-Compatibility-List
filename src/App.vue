@@ -30,6 +30,7 @@
 				<v-icon>fas fa-gamepad</v-icon>
 			</v-btn>
 
+			<v-btn flat color="red" href="https://patreon.com/Ryujinx"><v-icon>fab fa-patreon</v-icon></v-btn>
 			<v-btn flat color="green" href="https://github.com/Ryujinx/Ryujinx"><v-icon>fab fa-github</v-icon></v-btn>
 			<v-btn flat color="red" href="https://yt.ryujinx.org/"><v-icon>fab fa-youtube</v-icon></v-btn>
 			<v-btn flat color="blue" href="https://discord.gg/VkQYXAZ"><v-icon>fab fa-discord</v-icon></v-btn>
@@ -42,6 +43,7 @@
 			<v-btn flat exact :to="{ name: 'Contribute' }">Contribute</v-btn>
 			<v-btn flat exact :to="{ name: 'Compatibility' }">Compatibility</v-btn>
 
+			<v-btn flat color="red" href="https://patreon.com/Ryujinx"><v-icon>fab fa-patreon</v-icon></v-btn>
 			<v-btn flat color="green" href="https://github.com/Ryujinx/Ryujinx"><v-icon>fab fa-github</v-icon></v-btn>
 			<v-btn flat color="red" href="https://yt.ryujinx.org/"><v-icon>fab fa-youtube</v-icon></v-btn>
 			<v-btn flat color="blue" href="https://discord.gg/VkQYXAZ"><v-icon>fab fa-discord</v-icon></v-btn>
@@ -104,6 +106,14 @@
         </v-list-tile>
 
         <v-divider></v-divider>
+
+		<!-- Patreon -->
+        <v-list-tile color="red" href="https://patreon.com/Ryujinx">
+          <v-list-tile-action>
+            <v-icon color="red">fab fa-patreon</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title>Patreon</v-list-tile-title>
+        </v-list-tile>
 
         <!-- GitHub -->
         <v-list-tile color="green" href="https://github.com/Ryujinx/Ryujinx">
