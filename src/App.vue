@@ -150,7 +150,7 @@
     </v-navigation-drawer>
 	<v-footer fixed app class="text-xs-center">
 		<v-flex>
-			<em>Made with <v-icon color="red" class="mx-1">fas fa-heart</v-icon> by <a target="_blank" href="https://twitter.com/Lordmau5">Lordmau5</a></em>
+			<em>Website made with <v-icon color="red" class="mx-1">fas fa-heart</v-icon> by <a target="_blank" href="https://twitter.com/Lordmau5">Lordmau5</a></em>
 		</v-flex>
     </v-footer>
   </v-app>
