@@ -24,15 +24,47 @@
 										</v-flex>
 										<v-flex xs12 md6>
 											<p class="mt-4 title">Automatically compiled builds</p>
-											<v-btn dark color="ryu_orange" target="_blank" :href="downloadURL">
-												<v-icon left>fas fa-download</v-icon>
-												Download for <v-icon class="mx-1">fab fa-windows</v-icon> ({{ version }})
-											</v-btn>
+											<v-tooltip top>
+												<v-btn
+													slot="activator"
+													dark
+													color="ryu_orange"
+													target="_blank"
+													:href="`${downloadURL}-win_x64.zip`"
+												>
+													<v-icon>fab fa-windows</v-icon>
+												</v-btn>
+												<span>{{ this.version }}</span>
+											</v-tooltip>
+											<v-tooltip top>
+												<v-btn
+													slot="activator"
+													dark
+													color="ryu_orange"
+													target="_blank"
+													:href="`${downloadURL}-linux_x64.tar.gz`"
+												>
+													<v-icon>fab fa-linux</v-icon>
+												</v-btn>
+												<span>{{ this.version }}</span>
+											</v-tooltip>
+											<v-tooltip top>
+												<v-btn
+													slot="activator"
+													dark
+													color="ryu_orange"
+													target="_blank"
+													:href="`${downloadURL}-osx_x64.zip`"
+												>
+													<v-icon>fab fa-apple</v-icon>
+												</v-btn>
+												<span>{{ this.version }}</span>
+											</v-tooltip>
 											<v-btn flat target="_blank" href="https://ci.appveyor.com/project/gdkchan/ryujinx">
 												<img width="140" src="https://ci.appveyor.com/api/projects/status/ssg4jwu6ve3k594s?svg=true">
 											</v-btn>
 											<p>
-												<a href="https://openal.org/downloads/OpenAL11CoreSDK.zip">OpenAL</a> is required for Ryujinx to work!
+												<a href="https://openal.org/downloads/OpenAL11CoreSDK.zip">OpenAL</a> is required for Ryujinx to work <strong>on Windows</strong>!
 											</p>
 										</v-flex>
 									</v-layout>
@@ -66,7 +98,7 @@ export default {
 			let _a = await fetch(`https://ci.appveyor.com/api/buildjobs/${jobId}/artifacts`);
 			json = await _a.json();
 
-			this.downloadURL = `https://ci.appveyor.com/api/buildjobs/${jobId}/artifacts/${json[0].fileName}`;
+			this.downloadURL = `https://ci.appveyor.com/api/buildjobs/${jobId}/artifacts/ryujinx-${this.version}`;
 		}
 	},
 
