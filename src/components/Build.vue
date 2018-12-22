@@ -30,6 +30,7 @@
 													dark
 													color="ryu_orange"
 													target="_blank"
+													:loading="isLoading"
 													:href="`${downloadURL}-win_x64.zip`"
 												>
 													<v-icon>fab fa-windows</v-icon>
@@ -42,6 +43,7 @@
 													dark
 													color="ryu_orange"
 													target="_blank"
+													:loading="isLoading"
 													:href="`${downloadURL}-linux_x64.tar.gz`"
 												>
 													<v-icon>fab fa-linux</v-icon>
@@ -54,6 +56,7 @@
 													dark
 													color="ryu_orange"
 													target="_blank"
+													:loading="isLoading"
 													:href="`${downloadURL}-osx_x64.zip`"
 												>
 													<v-icon>fab fa-apple</v-icon>
@@ -81,12 +84,15 @@ export default {
 	data () {
 		return {
 			downloadURL: '',
+			isLoading: true,
 			version: 'Loading ...'
 		};
 	},
 
 	methods: {
 		async fetchDownloadURL () {
+			this.isLoading = true;
+
 			let _f 	= await fetch('https://ci.appveyor.com/api/projects/gdkchan/ryujinx/branch/master');
 			let json = await _f.json();
 
@@ -97,6 +103,7 @@ export default {
 			json = await _a.json();
 
 			this.downloadURL = `https://ci.appveyor.com/api/buildjobs/${jobId}/artifacts/ryujinx-${this.version}`;
+			this.isLoading = false;
 		}
 	},
 
