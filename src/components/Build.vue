@@ -60,12 +60,10 @@
 												</v-btn>
 												<span>{{ this.version }}</span>
 											</v-tooltip>
+											<br>
 											<v-btn flat target="_blank" href="https://ci.appveyor.com/project/gdkchan/ryujinx">
 												<img width="140" src="https://ci.appveyor.com/api/projects/status/ssg4jwu6ve3k594s?svg=true">
 											</v-btn>
-											<p>
-												<a href="https://openal.org/downloads/OpenAL11CoreSDK.zip">OpenAL</a> is required for Ryujinx to work <strong>on Windows</strong>!
-											</p>
 										</v-flex>
 									</v-layout>
 								</span>

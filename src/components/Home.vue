@@ -36,11 +36,6 @@
 									Ryujinx is created by user gdkchan over at the GBAtemp forums.
 									This emulator is also available on GitHub, and is licensed under the "Unlicensed" license.</p>
 
-									<p class="my-2">Note: This emulator is not capable (as of now) of running Commercial Nintendo Switch games!
-									If you somehow find a source claiming that the Emulator is capable, and it has not been officially confirmed by us;
-									Please consider reporting it via our Discord server. 
-									</p>
-
 									<v-btn dark color="ryu_blue" :to="{ name: 'Compatibility' }">
 										<v-icon left>fas fa-gamepad</v-icon>
 										Game compatibility list
@@ -99,8 +94,7 @@
 									<div class="display-1 text-xs-center">Gaming?</div>
 								</v-card-title>
 								<v-card-text class="text-xs-center">
-									Ryujinx currently doesn't work well with games as of now.
-									Much like 'yuzu,' it only supports homebrew at the moment.
+									Ryujinx boots lots of games, but almost none are playable, and won't be for a while.
 								</v-card-text>
 							</v-card>
 						</v-flex>
@@ -126,9 +120,7 @@
 									<div class="display-1 text-xs-center">Platforms</div>
 								</v-card-title>
 								<v-card-text class="text-xs-center">
-									Ryujinx is currently only available for Windows.
-									Although, support for Linux, and macOS is there;
-									but it may be more difficult to compile it.
+									Ryujinx is currently available for Windows, Linux, and macOS.
 								</v-card-text>
 							</v-card>
 						</v-flex>
