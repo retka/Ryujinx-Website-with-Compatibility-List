@@ -21,7 +21,7 @@
 				<v-icon>fas fa-newspaper</v-icon>
 			</v-btn>
 			<v-btn flat exact :to="{ name: 'Build' }">
-				<v-icon>fas fa-database</v-icon>
+				<v-icon>fas fa-download</v-icon>
 			</v-btn>
 			<v-btn flat exact :to="{ name: 'Contribute' }">
 				<v-icon>fas fa-code</v-icon>
@@ -39,7 +39,7 @@
 		<v-toolbar-items class="hidden-md-and-down">
 			<v-btn flat exact :to="{ name: 'Home' }">Home</v-btn>
 			<v-btn flat href="https://blog.ryujinx.org/">Blog</v-btn>
-			<v-btn flat exact :to="{ name: 'Build' }">Build</v-btn>
+			<v-btn flat exact :to="{ name: 'Build' }">Download</v-btn>
 			<v-btn flat exact :to="{ name: 'Contribute' }">Contribute</v-btn>
 			<v-btn flat exact :to="{ name: 'Compatibility' }">Compatibility</v-btn>
 
@@ -81,12 +81,12 @@
           <v-list-tile-title>Blog</v-list-tile-title>
         </v-list-tile>
 
-        <!-- Build -->
+        <!-- Download -->
         <v-list-tile exact :to="{ name: 'Build' }">
           <v-list-tile-action>
-            <v-icon>fas fa-database</v-icon>
+            <v-icon>fas fa-download</v-icon>
           </v-list-tile-action>
-          <v-list-tile-title>Build</v-list-tile-title>
+          <v-list-tile-title>Download</v-list-tile-title>
         </v-list-tile>
 
         <!-- Contribute -->
@@ -107,7 +107,7 @@
 
         <v-divider></v-divider>
 
-		<!-- Patreon -->
+		    <!-- Patreon -->
         <v-list-tile color="red" href="https://patreon.com/Ryujinx">
           <v-list-tile-action>
             <v-icon color="red">fab fa-patreon</v-icon>
