@@ -67,6 +67,63 @@
 											<v-btn flat target="_blank" href="https://ci.appveyor.com/project/gdkchan/ryujinx">
 												<img width="140" src="https://ci.appveyor.com/api/projects/status/ssg4jwu6ve3k594s?svg=true">
 											</v-btn>
+											<p class="mt-4 title">
+												Profiled builds
+												<br>
+												<span class="caption">(If you're not a developer, these builds aren't for you.)</span>
+											</p>
+											<div v-if="showProfiledBuilds">
+												<v-tooltip top>
+													<v-btn
+														slot="activator"
+														dark
+														color="ryu_blue"
+														target="_blank"
+														:loading="isLoading"
+														:href="`${downloadURL_profiled}-win_x64.zip`"
+													>
+														<v-icon>fab fa-windows</v-icon>
+													</v-btn>
+													<span>{{ this.version }}</span>
+												</v-tooltip>
+												<v-tooltip top>
+													<v-btn
+														slot="activator"
+														dark
+														color="ryu_blue"
+														target="_blank"
+														:loading="isLoading"
+														:href="`${downloadURL_profiled}-linux_x64.tar.gz`"
+													>
+														<v-icon>fab fa-linux</v-icon>
+													</v-btn>
+													<span>{{ this.version }}</span>
+												</v-tooltip>
+												<v-tooltip top>
+													<v-btn
+														slot="activator"
+														dark
+														color="ryu_blue"
+														target="_blank"
+														:loading="isLoading"
+														:href="`${downloadURL_profiled}-osx_x64.zip`"
+													>
+														<v-icon>fab fa-apple</v-icon>
+													</v-btn>
+													<span>{{ this.version }}</span>
+												</v-tooltip>
+											</div>
+											<div v-else>
+												<v-btn
+													slot="activator"
+													dark
+													color="ryu_orange"
+													target="_blank"
+													@click.stop="showProfiledBuilds = true"
+												>
+													I know what I'm doing
+												</v-btn>
+											</div>
 										</v-flex>
 									</v-layout>
 								</span>
@@ -84,8 +141,11 @@ export default {
 	data () {
 		return {
 			downloadURL: '',
+			downloadURL_profiled: '',
 			isLoading: true,
-			version: 'Loading ...'
+			version: 'Loading ...',
+			showProfiledBuilds: false,
+			jobId_profiled: ''
 		};
 	},
 
@@ -98,11 +158,14 @@ export default {
 
 			this.version = json.build.version;
 
-			let jobId = json.build.jobs[0].jobId;
-			let _a = await fetch(`https://ci.appveyor.com/api/buildjobs/${jobId}/artifacts`);
-			json = await _a.json();
+			console.log(json);
+
+			const jobId = json.build.jobs[0].jobId;
+			const jobIdProfiled = json.build.jobs[1].jobId;
 
 			this.downloadURL = `https://ci.appveyor.com/api/buildjobs/${jobId}/artifacts/ryujinx-${this.version}`;
+			this.downloadURL_profiled = `https://ci.appveyor.com/api/buildjobs/${jobIdProfiled}/artifacts/ryujinx-profiled-${this.version}`;
+
 			this.isLoading = false;
 		}
 	},

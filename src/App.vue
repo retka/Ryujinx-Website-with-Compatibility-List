@@ -26,7 +26,8 @@
 			<v-btn flat exact :to="{ name: 'Contribute' }">
 				<v-icon>fas fa-code</v-icon>
 			</v-btn>
-			<v-btn flat exact :to="{ name: 'Compatibility' }">
+			<!-- <v-btn flat exact :to="{ name: 'Compatibility' }"> -->
+			<v-btn flat exact href="https://github.com/Ryujinx/Ryujinx-Games-List/issues" target="_blank">
 				<v-icon>fas fa-gamepad</v-icon>
 			</v-btn>
 
@@ -41,7 +42,8 @@
 			<v-btn flat href="https://blog.ryujinx.org/">Blog</v-btn>
 			<v-btn flat exact :to="{ name: 'Build' }">Download</v-btn>
 			<v-btn flat exact :to="{ name: 'Contribute' }">Contribute</v-btn>
-			<v-btn flat exact :to="{ name: 'Compatibility' }">Compatibility</v-btn>
+			<!-- <v-btn flat exact :to="{ name: 'Compatibility' }">Compatibility</v-btn> -->
+			<v-btn flat exact href="https://github.com/Ryujinx/Ryujinx-Games-List/issues" target="_blank">Compatibility</v-btn>
 
 			<v-btn flat color="red" href="https://patreon.com/Ryujinx"><v-icon>fab fa-patreon</v-icon></v-btn>
 			<v-btn flat color="green" href="https://github.com/Ryujinx/Ryujinx"><v-icon>fab fa-github</v-icon></v-btn>
@@ -98,7 +100,8 @@
         </v-list-tile>
 
         <!-- Game Compatibility -->
-        <v-list-tile exact :to="{ name: 'Compatibility' }">
+        <!-- <v-list-tile exact :to="{ name: 'Compatibility' }"> -->
+        <v-list-tile exact href="https://github.com/Ryujinx/Ryujinx-Games-List/issues" target="_blank">
           <v-list-tile-action>
             <v-icon>fas fa-gamepad</v-icon>
           </v-list-tile-action>
