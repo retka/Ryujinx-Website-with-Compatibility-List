@@ -1,24 +1,35 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue';
-import App from './App';
-import router from './router';
-import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css';
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+import DefaultLayout from '~/layouts/Default.vue'
 
-Vue.use(Vuetify, {
-	theme: {
-		ryu_blue: '#00C4E1',
-		ryu_orange: '#FF5E5B'
-	}
-});
+export default function (Vue, { appOptions, head }) {
+  // First inject custom CSS needed
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+  })
 
-Vue.config.productionTip = false;
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css'
+  })
 
-/* eslint-disable no-new */
-new Vue({
-	el: '#app',
-	router,
-	components: { App },
-	template: '<App/>'
-});
+  // Remove the generator tag
+  const gIndex = head.meta.findIndex(e => e.name === 'generator')
+  if (gIndex !== -1) head.meta.splice(gIndex, 1)
+
+  const opts = {
+    theme: {
+		  ryu_blue: '#00C4E1',
+		  ryu_orange: '#FF5E5B'
+    }
+  } //opts includes, vuetify themes, icons, etc.
+
+  Vue.use(Vuetify, opts)
+
+  // Disable production tip
+  Vue.config.productionTip = false;
+
+  // Set default layout as a global component
+  Vue.component('Layout', DefaultLayout)
+}
