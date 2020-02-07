@@ -208,7 +208,7 @@ a {
 export default {
   data() {
     return {
-      dark: localStorage.dark_mode === "true",
+      dark: process.isClient && localStorage.dark_mode === "true",
       drawer: false,
       title: "Ryujinx - Switch Emulator"
     };
