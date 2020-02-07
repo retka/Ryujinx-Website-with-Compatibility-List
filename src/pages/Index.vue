@@ -52,7 +52,7 @@
               <v-flex xs12 md4>
                 <v-card class="elevation-0 transparent">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="ryu_blue--text text--lighten-2">fab fa-github</v-icon>
+                    <v-icon x-large class="--text text--lighten-2">fab fa-github</v-icon>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="display-1 text-xs-center">Where can I grab it?</div>
@@ -67,7 +67,7 @@
               <v-flex xs12 md4>
                 <v-card class="elevation-0 transparent">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="ryu_blue--text text--lighten-2">fas fa-code</v-icon>
+                    <v-icon x-large class="--text text--lighten-2">fas fa-code</v-icon>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="display-1 text-xs-center">How can I contribute?</div>
@@ -80,7 +80,7 @@
               <v-flex xs12 md4>
                 <v-card class="elevation-0 transparent">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="ryu_blue--text text--lighten-2">fas fa-gamepad</v-icon>
+                    <v-icon x-large class="--text text--lighten-2">fas fa-gamepad</v-icon>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="display-1 text-xs-center">Gaming?</div>
@@ -100,9 +100,9 @@
               <v-flex xs12 md4>
                 <v-card class="elevation-0 transparent">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="ryu_blue--text text--lighten-2 mr-4">fab fa-windows</v-icon>
-                    <v-icon x-large class="ryu_blue--text text--lighten-2 mr-4">fab fa-apple</v-icon>
-                    <v-icon x-large class="ryu_blue--text text--lighten-2">fab fa-linux</v-icon>
+                    <v-icon x-large class="--text text--lighten-2 mr-4">fab fa-windows</v-icon>
+                    <v-icon x-large class="--text text--lighten-2 mr-4">fab fa-apple</v-icon>
+                    <v-icon x-large class="--text text--lighten-2">fab fa-linux</v-icon>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="display-1 text-xs-center">Platforms</div>
@@ -115,7 +115,7 @@
               <v-flex xs12 md4>
                 <v-card class="elevation-0 transparent">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="ryu_blue--text text--lighten-2">fab fa-discord</v-icon>
+                    <v-icon x-large class="--text text--lighten-2">fab fa-discord</v-icon>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="display-1 text-xs-center">Discord</div>
@@ -129,7 +129,7 @@
               <v-flex xs12 md4>
                 <v-card class="elevation-0 transparent">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="ryu_blue--text text--lighten-2">fab fa-nintendo-switch</v-icon>
+                    <v-icon x-large class="--text text--lighten-2">fab fa-nintendo-switch</v-icon>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="display-1 text-xs-center">Why the name?</div>
@@ -154,17 +154,12 @@
               <v-flex xs12>
                 <v-card class="elevation-0 transparent">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="ryu_blue--text text--lighten-2">fas fa-users</v-icon>
+                    <v-icon x-large class="--text text--lighten-2">fas fa-users</v-icon>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="display-1 text-xs-center">Our Team</div>
                   </v-card-title>
                 </v-card>
-              </v-flex>
-            </v-layout>
-            <v-layout v-if="loading" row wrap align-center justify-center>
-              <v-flex xs12 class="text-xs-center">
-                <v-progress-circular :size="100" indeterminate color="primary"></v-progress-circular>
               </v-flex>
             </v-layout>
             <v-layout row wrap align-start justify-center>

@@ -29,17 +29,8 @@
           <v-icon>fas fa-gamepad</v-icon>
         </v-btn>
 
-        <v-btn flat color="red" href="https://patreon.com/Ryujinx">
-          <v-icon>fab fa-patreon</v-icon>
-        </v-btn>
-        <v-btn flat color="green" href="https://github.com/Ryujinx/Ryujinx">
-          <v-icon>fab fa-github</v-icon>
-        </v-btn>
-        <v-btn flat color="blue" href="https://twitter.com/RyujinxEmu">
-          <v-icon>fab fa-twitter</v-icon>
-        </v-btn>
-        <v-btn flat color="#7289DA" href="https://discord.gg/VkQYXAZ">
-          <v-icon>fab fa-discord</v-icon>
+        <v-btn flat v-for="element in $static.socialNavbarElements.edges" :key="element.node.id" :color="element.node.color" :href="element.node.href">
+          <v-icon>fab {{ element.node.icon }}</v-icon>
         </v-btn>
       </v-toolbar-items>
       <v-toolbar-items class="hidden-md-and-down">
@@ -54,17 +45,8 @@
           target="_blank"
         >Compatibility</v-btn>
 
-        <v-btn flat color="red" href="https://patreon.com/Ryujinx">
-          <v-icon>fab fa-patreon</v-icon>
-        </v-btn>
-        <v-btn flat color="green" href="https://github.com/Ryujinx/Ryujinx">
-          <v-icon>fab fa-github</v-icon>
-        </v-btn>
-        <v-btn flat color="blue" href="https://twitter.com/RyujinxEmu">
-          <v-icon>fab fa-twitter</v-icon>
-        </v-btn>
-        <v-btn flat color="#7289DA" href="https://discord.gg/VkQYXAZ">
-          <v-icon>fab fa-discord</v-icon>
+        <v-btn flat v-for="element in $static.socialNavbarElements.edges" :key="element.node.id" :color="element.node.color" :href="element.node.href">
+          <v-icon>fab {{ element.node.icon }}</v-icon>
         </v-btn>
       </v-toolbar-items>
       <v-toolbar-items class="ml-0 mr-2">
@@ -125,36 +107,11 @@
 
         <v-divider></v-divider>
 
-        <!-- Patreon -->
-        <v-list-tile color="red" href="https://patreon.com/Ryujinx">
+        <v-list-tile v-for="element in $static.socialNavbarElements.edges" :key="element.node.id" :color="element.node.color" :href="element.node.href">
           <v-list-tile-action>
-            <v-icon color="red">fab fa-patreon</v-icon>
+            <v-icon :color="element.node.color">fab {{ element.node.icon }}</v-icon>
           </v-list-tile-action>
-          <v-list-tile-title>Patreon</v-list-tile-title>
-        </v-list-tile>
-
-        <!-- GitHub -->
-        <v-list-tile color="green" href="https://github.com/Ryujinx/Ryujinx">
-          <v-list-tile-action>
-            <v-icon color="green">fab fa-github</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>GitHub</v-list-tile-title>
-        </v-list-tile>
-
-        <!-- YouTube -->
-        <v-list-tile color="blue" href="https://twitter.com/RyujinxEmu">
-          <v-list-tile-action>
-            <v-icon color="blue">fab fa-twitter</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Twitter</v-list-tile-title>
-        </v-list-tile>
-
-        <!-- Discord -->
-        <v-list-tile color="#7289DA" href="https://discord.gg/VkQYXAZ">
-          <v-list-tile-action>
-            <v-icon>fab fa-discord</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Discord</v-list-tile-title>
+          <v-list-tile-title>{{element.node.title}}</v-list-tile-title>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
@@ -174,6 +131,22 @@
 query {
   metadata {
     siteName
+  }
+}
+</static-query>
+
+
+<static-query>
+query {
+  socialNavbarElements: allSocialNavbarElements(order: ASC) {
+    edges {
+      node {
+        title
+        color
+        href
+        icon
+      }
+    }
   }
 }
 </static-query>
