@@ -168,25 +168,25 @@
               </v-flex>
             </v-layout>
             <v-layout row wrap align-start justify-center>
-              <v-flex xs12 sm4 md2 v-for="member in team" :key="member.name">
+              <v-flex xs12 sm4 md2 v-for="member in $page.teams.edges" :key="member.node.id">
                 <v-card class="elevation-0 transparent">
                   <v-card-text class="text-xs-center">
                     <v-avatar size="72">
-                      <img :src="member.avatar" />
+                      <img :src="member.node.avatar" />
                     </v-avatar>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <a
-                      v-if="member.github"
-                      :href="`https://github.com/${member.github}`"
+                      v-if="member.node.github"
+                      :href="`https://github.com/${member.node.github}`"
                       target="_blank"
                       class="headline text-xs-center"
-                    >{{ member.name }}</a>
+                    >{{ member.node.name }}</a>
                     <p v-else class="headline text-xs-center">{{ member.name }}</p>
                   </v-card-title>
                   <v-card-text class="text-xs-center">
-                    <p class="title">{{ member.title }}</p>
-                    <em v-if="member.description">{{ member.description }}</em>
+                    <p class="title">{{ member.node.title }}</p>
+                    <em v-if="member.node.description">{{ member.node.description }}</em>
                   </v-card-text>
                 </v-card>
               </v-flex>
@@ -198,27 +198,26 @@
   </Layout>
 </template>
 
+<page-query>
+query {
+  teams: allTeam(order: ASC) {
+    edges {
+      node {
+        id
+        name
+        github
+        avatar
+        title
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
 export default {
   metaInfo: {
     title: "Nintendo Switch Emulator"
-  },
-  data() {
-    return {
-      loading: true,
-      team: []
-    };
-  },
-  methods: {
-    async fetchTeamMembers() {
-      let _t = await fetch("/public/team.json");
-      this.team = await _t.json();
-
-      this.loading = false;
-    }
-  },
-  mounted() {
-    this.fetchTeamMembers();
   }
 };
 </script>

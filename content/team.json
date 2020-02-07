@@ -2,13 +2,25 @@
 	"name": "gdkchan",
 	"github": "gdkchan",
 	"avatar": "https://avatars2.githubusercontent.com/u/5624669",
-	"title": "Project Lead"
+	"title": "Lead Developer"
 },
 {
 	"name": "Ac_K",
 	"github": "AcK77",
 	"avatar": "https://avatars3.githubusercontent.com/u/4905390",
-	"title": "Secondary Developer"
+	"title": "Developer"
+},
+{
+	"name": "Thog",
+	"github": "Thog",
+	"avatar": "https://avatars3.githubusercontent.com/u/1760003",
+	"title": "Developer"
+},
+{
+	"name": "riperiperi",
+	"github": "riperiperi",
+	"avatar": "https://avatars3.githubusercontent.com/u/6294155",
+	"title": "Developer"
 },
 {
 	"name": "LDj3SNuD",
@@ -23,21 +35,21 @@
 	"title": "Developer"
 },
 {
-	"name": "MerryMage",
-	"github": "MerryMage",
-	"avatar": "https://avatars2.githubusercontent.com/u/8682882",
+	"name": "»jD«",
+	"github": "jduncanator",
+	"avatar": "https://avatars1.githubusercontent.com/u/1518948",
 	"title": "Developer"
 },
 {
-	"name": "MS-DOS1999",
-	"github": "MS-DOS1999",
-	"avatar": "https://avatars3.githubusercontent.com/u/23052366",
+	"name": "Xpl0itR",
+	"github": "Xpl0itR",
+	"avatar": "https://avatars3.githubusercontent.com/u/7204422",
 	"title": "Developer"
 },
 {
-	"name": "Thog",
-	"github": "Thog",
-	"avatar": "https://avatars3.githubusercontent.com/u/1760003",
+	"name": "Moosehunter",
+	"github": "Thealexbarney",
+	"avatar": "https://avatars0.githubusercontent.com/u/601603?v=4",
 	"title": "Developer"
 },
 {
@@ -50,5 +62,5 @@
 	"name": "Dr. Hacknik",
 	"github": "drhacknik",
 	"avatar": "https://avatars1.githubusercontent.com/u/7658605",
-	"title": "Discord Maintainer, Web Designer"
+	"title": "Discord Maintainer"
 }]
