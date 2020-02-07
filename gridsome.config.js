@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Ryujinx',
-  siteUrl: 'https://www.ryujinx.org',
+  siteUrl: 'https://ryujinx.org',
   titleTemplate: 'Ryujinx - %s',
   plugins: []
 }
