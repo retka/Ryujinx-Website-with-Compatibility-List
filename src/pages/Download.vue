@@ -166,8 +166,6 @@ export default {
 
       this.version = json.build.version;
 
-      console.log(json);
-
       const jobId = json.build.jobs[0].jobId;
       const jobIdProfiled = json.build.jobs[1].jobId;
 
