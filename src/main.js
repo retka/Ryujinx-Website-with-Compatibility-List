@@ -24,6 +24,12 @@ export default function (Vue, { appOptions, router, head }) {
   const dIndex = head.meta.findIndex(e => e.name === 'description')
   if (dIndex !== -1) head.meta.splice(dIndex, 1)
 
+  // For Google Search Console
+  head.meta.push({
+    name: "google-site-verification",
+    content: "6-jOQTZMaaKrCTbkRoghe5Pd1kbYhyGpOTAgUhoT9HA"
+  })
+
   const opts = {
     theme: {
 		  ryu_blue: '#00C4E1',
