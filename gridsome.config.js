@@ -15,5 +15,15 @@ module.exports = {
     siteTwitter: "@RyujinxEmu",
     coverImage: "/public/logo.png"
   },
-  plugins: []
+  plugins: [
+    'gridsome-plugin-robots-txt',
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 0, // we don't want the sitemap to be cached!
+        exclude: [],
+        config: {}
+      }
+    }
+  ]
 }
