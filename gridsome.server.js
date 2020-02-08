@@ -26,5 +26,6 @@ module.exports = function (api) {
   api.loadSource(async actions => {
     addJSONCollection(actions, "Team", "./content/team.json")
     addJSONCollection(actions, "SocialNavbarElements", "./content/ui/navbar/social.json")
+    addJSONCollection(actions, "ExtraPagesInfo", "./content/extra_page_infos.json")
   })
 }

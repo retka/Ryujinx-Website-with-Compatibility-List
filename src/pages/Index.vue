@@ -6,7 +6,6 @@
           <v-layout column align-center justify-center class="text-xs-center">
             <img src="@/assets/logo.png" alt="Ryujinx" class="mb-5" />
             <p class="display-1">A simple, experimental Nintendo Switch emulator.</p>
-            <p class="caption">Information and content is subject to change.</p>
           </v-layout>
         </v-parallax>
       </section>
@@ -206,13 +205,11 @@ query {
       }
     }
   }
+  extraPagesInfo(path: "/") {
+    path
+    title
+    keywords
+  }
 }
 </page-query>
 
-<script>
-export default {
-  metaInfo: {
-    title: "Nintendo Switch Emulator"
-  }
-};
-</script>

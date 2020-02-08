@@ -1,5 +1,7 @@
 <template>
   <v-app :dark="dark">
+    <!-- IMPORTANT: KEEP THIS HERE-->
+    <SEO/>
     <v-toolbar fixed app>
       <v-toolbar-side-icon class="hidden-md-and-up mr-0" @click="drawer = !drawer"></v-toolbar-side-icon>
       <v-avatar size="32px" tile class="ml-3 mr-1">

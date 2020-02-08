@@ -139,11 +139,18 @@
   </Layout>
 </template>
 
+<page-query>
+query {
+  extraPagesInfo(path: "/download") {
+    path
+    title
+    keywords
+  }
+}
+</page-query>
+
 <script>
 export default {
-  metaInfo: {
-    title: "Download"
-  },
   data() {
     return {
       downloadURL: "",

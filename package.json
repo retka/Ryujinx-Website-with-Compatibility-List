@@ -9,9 +9,6 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-json": "^0.2.1",
-    "axios": "^0.19.2",
     "gridsome": "^0.7.0",
     "vuetify": "^1.0.0"
   },

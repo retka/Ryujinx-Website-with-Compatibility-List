@@ -123,10 +123,12 @@
   </Layout>
 </template>
 
-<script>
-export default {
-  metaInfo: {
-    title: "Contribute"
+<page-query>
+query {
+  extraPagesInfo(path: "/contribute") {
+    path
+    title
+    keywords
   }
-};
-</script>
+}
+</page-query>

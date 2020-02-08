@@ -1,8 +1,10 @@
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import DefaultLayout from '~/layouts/Default.vue'
+import SEO from '~/components/SEO.vue'
 
-export default function (Vue, { appOptions, head }) {
+
+export default function (Vue, { appOptions, router, head }) {
   // First inject custom CSS needed
   head.link.push({
     rel: 'stylesheet',
@@ -18,6 +20,10 @@ export default function (Vue, { appOptions, head }) {
   const gIndex = head.meta.findIndex(e => e.name === 'generator')
   if (gIndex !== -1) head.meta.splice(gIndex, 1)
 
+  // Remove the description tag as we generate a custom one in SEO
+  const dIndex = head.meta.findIndex(e => e.name === 'description')
+  if (dIndex !== -1) head.meta.splice(dIndex, 1)
+
   const opts = {
     theme: {
 		  ryu_blue: '#00C4E1',
@@ -32,4 +38,7 @@ export default function (Vue, { appOptions, head }) {
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+
+  // Set the SEO component
+  Vue.component('SEO', SEO)
 }

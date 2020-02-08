@@ -60,11 +60,18 @@
   </Layout>
 </template>
 
+<page-query>
+query {
+  extraPagesInfo(path: "/build") {
+    path
+    title
+    keywords
+  }
+}
+</page-query>
+
 <script>
 export default {
-  metaInfo: {
-    title: "Build"
-  },
   data() {
     return {
       downloadURL: "",
