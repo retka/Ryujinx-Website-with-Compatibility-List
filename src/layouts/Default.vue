@@ -117,13 +117,17 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-footer fixed app class="text-xs-center">
-      <v-flex>
-        <em>
-          Website made with
-          <v-icon color="red" class="mx-1">fas fa-heart</v-icon>by
-          <a target="_blank" href="https://twitter.com/Lordmau5">Lordmau5</a>
-        </em>
+    <v-footer class="text-xs-center">
+      <v-flex class="text-xs-left">
+      <v-card-text class="py-2 text-center">
+        Website designed by
+        <a target="_blank" href="https://twitter.com/Lordmau5">Lordmau5</a>
+      </v-card-text>
+      </v-flex>
+      <v-flex class="text-xs-right">
+      <v-card-text class="py-2 text-center">
+        {{this.$static.metadata.siteAuthor}} © {{ new Date().getFullYear() }}
+      </v-card-text>
       </v-flex>
     </v-footer>
   </v-app>
@@ -132,14 +136,8 @@
 <static-query>
 query {
   metadata {
-    siteName
+    siteAuthor
   }
-}
-</static-query>
-
-
-<static-query>
-query {
   socialNavbarElements: allSocialNavbarElements(order: ASC) {
     edges {
       node {
@@ -169,9 +167,9 @@ a {
 export default {
   data() {
     return {
+      title: "Ryujinx - Nintendo Switch Emulator",
       dark: process.isClient && localStorage.dark_mode === "true",
       drawer: false,
-      title: "Ryujinx - Switch Emulator"
     };
   },
   methods: {
