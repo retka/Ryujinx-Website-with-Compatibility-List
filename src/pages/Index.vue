@@ -4,7 +4,7 @@
       <section>
         <v-parallax :src="require('@/assets/wallp.png')" height="600">
           <v-layout column align-center justify-center class="text-xs-center">
-            <img src="@/assets/logo.png" alt="Ryujinx" class="mb-5" />
+            <g-image src="~/assets/logo.png" alt="Ryujinx" class="mb-5" width="128"/>
             <p class="display-1">A simple, experimental Nintendo Switch emulator.</p>
           </v-layout>
         </v-parallax>
@@ -166,13 +166,14 @@
                 <v-card class="elevation-0 transparent">
                   <v-card-text class="text-xs-center">
                     <v-avatar size="72">
-                      <img :src="member.node.avatar" />
+                      <g-image alt="{{member.node.name}}'s avatar" :src="member.node.avatar" />
                     </v-avatar>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <a
                       v-if="member.node.github"
                       :href="`https://github.com/${member.node.github}`"
+                      rel="noopener"
                       target="_blank"
                       class="headline text-xs-center"
                     >{{ member.node.name }}</a>

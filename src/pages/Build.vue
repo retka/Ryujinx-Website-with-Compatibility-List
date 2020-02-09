@@ -16,6 +16,7 @@
                           Download NET Core
                           <a
                             href="https://dotnet.microsoft.com/download/dotnet-core/3.0"
+                            rel="noopener"
                             target="_blank"
                           >here</a>. Then install the SDK.
                         </p>
@@ -24,7 +25,7 @@
                         <p class="mt-4 title">Step two (Variant one):</p>
                         <p>
                           After the installation of the Net Core SDK is done; go ahead and copy the Clone link from GitHub from
-                          <a href="https://github.com/Ryujinx/Ryujinx" target="_blank">here</a> (via Clone or Download --> Copy HTTPS Link. Or you can download the ZIP tarball.)
+                          <a href="https://github.com/Ryujinx/Ryujinx" rel="noopener" target="_blank">here</a> (via Clone or Download --> Copy HTTPS Link. Or you can download the ZIP tarball.)
                           You can Git Clone the repo by using the GitBash, or you may use the second variant.
                         </p>
                       </v-flex>

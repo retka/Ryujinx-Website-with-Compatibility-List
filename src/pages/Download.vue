@@ -8,7 +8,7 @@
               <v-flex xs12 md6>
                 <div class="text-xs-center">
                   <p class="display-1">Building Ryujinx and latest downloads</p>
-                  <img class="text-xs-center" width="100%" src="@/assets/shell.png" />
+                  <g-image class="text-xs-center" width="100%" src="~/assets/shell.png" alt="Shell" />
                   <span class="subheading">
                     <v-layout row wrap align-start justify-center>
                       <v-flex xs12 md6>
@@ -25,6 +25,7 @@
                             dark
                             color="ryu_orange"
                             target="_blank"
+                            rel="noopener"
                             :loading="isLoading"
                             :href="`${downloadURL}-win_x64.zip`"
                           >
@@ -38,6 +39,7 @@
                             dark
                             color="ryu_orange"
                             target="_blank"
+                            rel="noopener"
                             :loading="isLoading"
                             :href="`${downloadURL}-linux_x64.tar.gz`"
                           >
@@ -51,6 +53,7 @@
                             dark
                             color="ryu_orange"
                             target="_blank"
+                            rel="noopener"
                             :loading="isLoading"
                             :href="`${downloadURL}-osx_x64.zip`"
                           >
@@ -62,9 +65,10 @@
                         <v-btn
                           flat
                           target="_blank"
+                          rel="noopener"
                           href="https://ci.appveyor.com/project/gdkchan/ryujinx"
                         >
-                          <img
+                          <g-image
                             width="140"
                             src="https://ci.appveyor.com/api/projects/status/ssg4jwu6ve3k594s?svg=true"
                           />
@@ -83,6 +87,7 @@
                               dark
                               color="ryu_blue"
                               target="_blank"
+                              rel="noopener"
                               :loading="isLoading"
                               :href="`${downloadURL_profiled}-win_x64.zip`"
                             >
@@ -96,6 +101,7 @@
                               dark
                               color="ryu_blue"
                               target="_blank"
+                              rel="noopener"
                               :loading="isLoading"
                               :href="`${downloadURL_profiled}-linux_x64.tar.gz`"
                             >
@@ -109,6 +115,7 @@
                               dark
                               color="ryu_blue"
                               target="_blank"
+                              rel="noopener"
                               :loading="isLoading"
                               :href="`${downloadURL_profiled}-osx_x64.zip`"
                             >
@@ -123,6 +130,7 @@
                             dark
                             color="ryu_orange"
                             target="_blank"
+                            rel="noopener"
                             @click.stop="showProfiledBuilds = true"
                           >I know what I'm doing</v-btn>
                         </div>

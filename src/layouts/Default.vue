@@ -5,7 +5,7 @@
     <v-toolbar fixed app>
       <v-toolbar-side-icon class="hidden-md-and-up mr-0" @click="drawer = !drawer"></v-toolbar-side-icon>
       <v-avatar size="32px" tile class="ml-3 mr-1">
-        <img src="@/assets/logo.png" />
+        <g-image src="~/assets/logo.png" alt="Ryujinx" width="32"/>
       </v-avatar>
       <v-toolbar-title v-text="title" class="ml-2"></v-toolbar-title>
       <v-spacer></v-spacer>
@@ -26,6 +26,7 @@
           flat
           exact
           href="https://github.com/Ryujinx/Ryujinx-Games-List/issues"
+          rel="noopener"
           target="_blank"
         >
           <v-icon>fas fa-gamepad</v-icon>
@@ -44,6 +45,7 @@
           flat
           exact
           href="https://github.com/Ryujinx/Ryujinx-Games-List/issues"
+          rel="noopener"
           target="_blank"
         >Compatibility</v-btn>
 
@@ -99,6 +101,7 @@
         <v-list-tile
           exact
           href="https://github.com/Ryujinx/Ryujinx-Games-List/issues"
+          rel="noopener"
           target="_blank"
         >
           <v-list-tile-action>
@@ -121,7 +124,7 @@
       <v-flex class="text-xs-left">
       <v-card-text class="py-2 text-center">
         Website designed by
-        <a target="_blank" href="https://twitter.com/Lordmau5">Lordmau5</a>
+        <a rel="noopener" target="_blank" href="https://twitter.com/Lordmau5">Lordmau5</a>
       </v-card-text>
       </v-flex>
       <v-flex class="text-xs-right">

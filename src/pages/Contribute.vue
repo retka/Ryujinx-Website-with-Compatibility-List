@@ -40,6 +40,7 @@
                       <v-flex xs12 md6>
                         <v-btn
                           href="https://discord.gg/VkQYXAZ"
+                          rel="noopener"
                           target="_blank"
                           dark
                           color="blue"
@@ -51,6 +52,7 @@
                       <v-flex xs12 md6>
                         <v-btn
                           href="https://patreon.com/Ryujinx"
+                          rel="noopener"
                           target="_blank"
                           dark
                           color="red"
@@ -72,6 +74,7 @@
 
                         <v-btn
                           href="https://discord.gg/VkQYXAZ"
+                          rel="noopener"
                           target="_blank"
                           dark
                           color="blue"
@@ -91,6 +94,7 @@
 
                         <v-btn
                           href="https://patreon.com/Ryujinx"
+                          rel="noopener"
                           target="_blank"
                           dark
                           color="red"
