@@ -3,12 +3,11 @@ import 'vuetify/dist/vuetify.min.css'
 import DefaultLayout from '~/layouts/Default.vue'
 import SEO from '~/components/SEO.vue'
 
-
 export default function (Vue, { appOptions, router, head }) {
   // First inject custom CSS needed
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+    href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons&display=swap'
   })
 
   head.link.push({
