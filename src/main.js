@@ -1,5 +1,6 @@
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import '~/external/fontawesome/css/fontawesome-all.css'
 import DefaultLayout from '~/layouts/Default.vue'
 import SEO from '~/components/SEO.vue'
 
@@ -8,11 +9,6 @@ export default function (Vue, { appOptions, router, head }) {
   head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons&display=swap'
-  })
-
-  head.link.push({
-    rel: 'stylesheet',
-    href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css'
   })
 
   // Remove the generator tag

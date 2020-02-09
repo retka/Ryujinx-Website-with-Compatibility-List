@@ -8,7 +8,7 @@
               <v-flex xs12 md6>
                 <div class="text-xs-center">
                   <p class="display-1">Building Ryujinx and latest downloads</p>
-                  <g-image class="text-xs-center" width="100%" src="~/assets/shell.png" alt="Shell" />
+                  <img class="text-xs-center" width="100%" src="@/assets/shell.png" alt="Shell" />
                   <span class="subheading">
                     <v-layout row wrap align-start justify-center>
                       <v-flex xs12 md6>
