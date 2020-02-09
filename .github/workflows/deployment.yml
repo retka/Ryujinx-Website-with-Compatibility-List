@@ -33,3 +33,6 @@ jobs:
         publish_dir: ./dist
         publish_branch: master
         external_repository: Ryujinx/ryujinx.github.io 
+        user_name: GitHub Action
+        user_email: action@github.com
+        force_orphan: true
