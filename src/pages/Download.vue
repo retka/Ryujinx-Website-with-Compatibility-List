@@ -2,68 +2,78 @@
   <Layout>
     <div>
       <section>
-        <v-layout column wrap class="my-5" align-center>
-          <v-container grid-list-xl fluid>
-            <v-layout row wrap align-start justify-center>
-              <v-flex xs12 md6>
-                <div class="text-xs-center">
+        <v-row class="my-5" align="center">
+          <v-container fluid>
+            <v-row align="start" justify="center">
+              <v-col cols="12" md="6">
+                <div class="text-center">
                   <p class="display-1">Building Ryujinx and latest downloads</p>
-                  <img class="text-xs-center" width="100%" src="@/assets/shell.png" alt="Shell" />
+                  <img class="text-center" width="100%" src="@/assets/shell.png" alt="Shell" />
                   <span class="subheading">
-                    <v-layout row wrap align-start justify-center>
-                      <v-flex xs12 md6>
+                    <v-row align="start" justify="center">
+                      <v-col cols="12" md="6">
                         <p class="mt-4 title">Building methods</p>
-                        <v-btn dark color="ryu_blue" to="/build">
-                          <v-icon left>fas fa-code</v-icon>.NET Core
+                        <v-btn dark class="mx-2" color="ryu_blue" to="/build">
+                          <v-icon class="ml-n1 mr-2">fas fa-code</v-icon>.NET Core
                         </v-btn>
-                      </v-flex>
-                      <v-flex xs12 md6>
+                      </v-col>
+                      <v-col cols="12" md="6">
                         <p class="mt-4 title">Automatically compiled builds</p>
                         <v-tooltip top>
-                          <v-btn
-                            slot="activator"
-                            dark
-                            color="ryu_orange"
-                            target="_blank"
-                            rel="noopener"
-                            :loading="isLoading"
-                            :href="`${downloadURL}-win_x64.zip`"
-                          >
-                            <v-icon>fab fa-windows</v-icon>
-                          </v-btn>
-                          <span>{{ this.version }}</span>
+                          <template v-slot:activator="{ on }">
+                            <v-btn
+                              v-on="on"
+                              class="mx-2"
+                              dark
+                              color="ryu_orange"
+                              target="_blank"
+                              rel="noopener"
+                              :loading="isLoading"
+                              :href="`${downloadURL}-win_x64.zip`"
+                            >
+                              <v-icon class="mx-5">fab fa-windows</v-icon>
+                            </v-btn>
+                          </template>
+                          <span>{{ version }}</span>
                         </v-tooltip>
                         <v-tooltip top>
-                          <v-btn
-                            slot="activator"
-                            dark
-                            color="ryu_orange"
-                            target="_blank"
-                            rel="noopener"
-                            :loading="isLoading"
-                            :href="`${downloadURL}-linux_x64.tar.gz`"
-                          >
-                            <v-icon>fab fa-linux</v-icon>
-                          </v-btn>
-                          <span>{{ this.version }}</span>
+                          <template v-slot:activator="{ on }">
+                            <v-btn
+                              v-on="on"
+                              class="mx-2"
+                              dark
+                              color="ryu_orange"
+                              target="_blank"
+                              rel="noopener"
+                              :loading="isLoading"
+                              :href="`${downloadURL}-linux_x64.tar.gz`"
+                            >
+                              <v-icon class="mx-5">fab fa-linux</v-icon>
+                            </v-btn>
+                          </template>
+                          <span>{{ version }}</span>
                         </v-tooltip>
                         <v-tooltip top>
-                          <v-btn
-                            slot="activator"
-                            dark
-                            color="ryu_orange"
-                            target="_blank"
-                            rel="noopener"
-                            :loading="isLoading"
-                            :href="`${downloadURL}-osx_x64.zip`"
-                          >
-                            <v-icon>fab fa-apple</v-icon>
-                          </v-btn>
-                          <span>{{ this.version }}</span>
+                          <template v-slot:activator="{ on }">
+                            <v-btn
+                              v-on="on"
+                              class="mx-2"
+                              dark
+                              color="ryu_orange"
+                              target="_blank"
+                              rel="noopener"
+                              :loading="isLoading"
+                              :href="`${downloadURL}-osx_x64.zip`"
+                            >
+                              <v-icon class="mx-5">fab fa-apple</v-icon>
+                            </v-btn>
+                          </template>
+                          <span>{{ version }}</span>
                         </v-tooltip>
                         <br />
                         <v-btn
-                          flat
+                          text
+                          class="my-2"
                           target="_blank"
                           rel="noopener"
                           href="https://ci.appveyor.com/project/gdkchan/ryujinx"
@@ -80,53 +90,62 @@
                             class="caption"
                           >(If you're not a developer, these builds aren't for you.)</span>
                         </p>
+                        <div class="text-center">
                         <div v-if="showProfiledBuilds">
                           <v-tooltip top>
-                            <v-btn
-                              slot="activator"
-                              dark
-                              color="ryu_blue"
-                              target="_blank"
-                              rel="noopener"
-                              :loading="isLoading"
-                              :href="`${downloadURL_profiled}-win_x64.zip`"
-                            >
-                              <v-icon>fab fa-windows</v-icon>
-                            </v-btn>
+                            <template v-slot:activator="{ on }">
+                              <v-btn
+                                v-on="on"
+                                class="mx-2"
+                                dark
+                                color="ryu_blue"
+                                target="_blank"
+                                rel="noopener"
+                                :loading="isLoading"
+                                :href="`${downloadURL_profiled}-win_x64.zip`"
+                              >
+                                <v-icon class="mx-5">fab fa-windows</v-icon>
+                              </v-btn>
+                            </template>
                             <span>{{ this.version }}</span>
                           </v-tooltip>
                           <v-tooltip top>
-                            <v-btn
-                              slot="activator"
-                              dark
-                              color="ryu_blue"
-                              target="_blank"
-                              rel="noopener"
-                              :loading="isLoading"
-                              :href="`${downloadURL_profiled}-linux_x64.tar.gz`"
-                            >
-                              <v-icon>fab fa-linux</v-icon>
-                            </v-btn>
+                            <template v-slot:activator="{ on }">
+                              <v-btn
+                                v-on="on"
+                                class="mx-2"
+                                dark
+                                color="ryu_blue"
+                                target="_blank"
+                                rel="noopener"
+                                :loading="isLoading"
+                                :href="`${downloadURL_profiled}-linux_x64.tar.gz`"
+                              >
+                                <v-icon class="mx-5">fab fa-linux</v-icon>
+                              </v-btn>
+                            </template>
                             <span>{{ this.version }}</span>
                           </v-tooltip>
                           <v-tooltip top>
-                            <v-btn
-                              slot="activator"
-                              dark
-                              color="ryu_blue"
-                              target="_blank"
-                              rel="noopener"
-                              :loading="isLoading"
-                              :href="`${downloadURL_profiled}-osx_x64.zip`"
-                            >
-                              <v-icon>fab fa-apple</v-icon>
-                            </v-btn>
+                            <template v-slot:activator="{ on }">
+                              <v-btn
+                                v-on="on"
+                                class="mx-2"
+                                dark
+                                color="ryu_blue"
+                                target="_blank"
+                                rel="noopener"
+                                :loading="isLoading"
+                                :href="`${downloadURL_profiled}-osx_x64.zip`"
+                              >
+                                <v-icon class="mx-5">fab fa-apple</v-icon>
+                              </v-btn>
+                            </template>
                             <span>{{ this.version }}</span>
                           </v-tooltip>
                         </div>
                         <div v-else>
                           <v-btn
-                            slot="activator"
                             dark
                             color="ryu_orange"
                             target="_blank"
@@ -134,14 +153,15 @@
                             @click.stop="showProfiledBuilds = true"
                           >I know what I'm doing</v-btn>
                         </div>
-                      </v-flex>
-                    </v-layout>
+                        </div>
+                      </v-col>
+                    </v-row>
                   </span>
                 </div>
-              </v-flex>
-            </v-layout>
+              </v-col>
+            </v-row>
           </v-container>
-        </v-layout>
+        </v-row>
       </section>
     </div>
   </Layout>

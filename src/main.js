@@ -4,11 +4,11 @@ import '~/external/fontawesome/css/fontawesome-all.css'
 import DefaultLayout from '~/layouts/Default.vue'
 import SEO from '~/components/SEO.vue'
 
-export default function (Vue, { appOptions, router, head }) {
+export default function (Vue, { appOptions, head }) {
   // First inject custom CSS needed
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons&display=swap'
+    href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap'
   })
 
   // Remove the generator tag
@@ -27,15 +27,28 @@ export default function (Vue, { appOptions, router, head }) {
 
   const opts = {
     theme: {
-		  ryu_blue: '#00C4E1',
-		  ryu_orange: '#FF5E5B'
-    }
+      themes: {
+        light: {
+          ryu_blue: '#00C4E1',
+          ryu_orange: '#FF5E5B',
+        },
+        dark: {
+          ryu_blue: '#00C4E1',
+          ryu_orange: '#FF5E5B',
+        }
+      }
+    },
+    icons: {
+      iconfont: 'fa',
+    },
   } //opts includes, vuetify themes, icons, etc.
 
-  Vue.use(Vuetify, opts)
+  Vue.use(Vuetify)
+
+  appOptions.vuetify = new Vuetify(opts);
 
   // Disable production tip
-  Vue.config.productionTip = false;
+  //Vue.config.productionTip = false;
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
