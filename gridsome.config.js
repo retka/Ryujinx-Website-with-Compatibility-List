@@ -25,5 +25,12 @@ module.exports = {
         config: {}
       }
     }
-  ]
+  ],
+  css: {
+    loaderOptions: {
+      scss: {
+        // options here will be passed to sass-loader, nothing for now.
+      }
+    }
+  }
 }

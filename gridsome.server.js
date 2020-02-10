@@ -1,4 +1,5 @@
 const nodeExternals = require('webpack-node-externals')
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 const fs = require('fs')
 
 function addJSONCollection(actions,typeName, path) {
@@ -21,6 +22,12 @@ module.exports = function (api) {
         })
       ])
     }
+  })
+
+  api.configureWebpack({
+    plugins: [
+      new VuetifyLoaderPlugin()
+    ]
   })
 
   api.loadSource(async actions => {

@@ -1,4 +1,4 @@
-import Vuetify from 'vuetify'
+import Vuetify from 'vuetify/lib'
 import 'vuetify/dist/vuetify.min.css'
 import '~/external/fontawesome/css/fontawesome-all.css'
 import DefaultLayout from '~/layouts/Default.vue'
