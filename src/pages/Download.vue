@@ -8,7 +8,7 @@
               <v-col cols="12" md="6">
                 <div class="text-center">
                   <p class="display-1">Building Ryujinx and latest downloads</p>
-                  <img class="text-center" width="100%" src="@/assets/shell.png" alt="Shell" />
+                  <g-image class="text-center" width="800" src="~/assets/shell.png" alt="Shell" />
                   <span class="subheading">
                     <v-row align="start" justify="center">
                       <v-col cols="12" md="6">
