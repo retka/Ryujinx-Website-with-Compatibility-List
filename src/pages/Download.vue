@@ -76,7 +76,7 @@
                           class="my-2"
                           target="_blank"
                           rel="noopener"
-                          href="https://ci.appveyor.com/project/gdkchan/ryujinx"
+                          href="https://ci.appveyor.com/project/gdkchan/ryujinx?branch=master"
                         >
                           <g-image
                             width="140"
