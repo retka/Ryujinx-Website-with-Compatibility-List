@@ -20,14 +20,8 @@ jobs:
     - name: "Install NPM dependencies"
       run: npm install
 
-    - name: "Install CLI tools"
-      run: "npm install --global @gridsome/cli purgecss"
-
     - name: "Build"
-      run: npm run build
-
-    - name: "PurgeCSS pass"
-      run: purgecss --config purgecss.config.js --output dist/assets/css/
+      run: npm run deploy
 
     - name: "Deploy"
       uses: peaceiris/actions-gh-pages@v3
