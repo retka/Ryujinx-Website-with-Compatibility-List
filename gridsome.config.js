@@ -24,7 +24,13 @@ module.exports = {
         exclude: [],
         config: {}
       }
-    }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-162558184-1'
+      }
+    },
   ],
   css: {
     loaderOptions: {
