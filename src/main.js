@@ -3,6 +3,7 @@ import 'vuetify/dist/vuetify.min.css'
 import '~/external/fontawesome/css/fontawesome-all.css'
 import DefaultLayout from '~/layouts/Default.vue'
 import SEO from '~/components/SEO.vue'
+import DownloadButton from '~/components/DownloadButton.vue'
 
 export default function (Vue, { appOptions, head }) {
   // First inject custom CSS needed
@@ -55,4 +56,7 @@ export default function (Vue, { appOptions, head }) {
 
   // Set the SEO component
   Vue.component('SEO', SEO)
+
+  // Generic Components
+  Vue.component('DownloadButton', DownloadButton)
 }

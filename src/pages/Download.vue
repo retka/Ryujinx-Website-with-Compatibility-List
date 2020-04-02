@@ -19,58 +19,36 @@
                       </v-col>
                       <v-col cols="12" md="6">
                         <p class="mt-4 title">Automatically compiled builds</p>
-                        <v-tooltip top>
-                          <template v-slot:activator="{ on }">
-                            <v-btn
-                              v-on="on"
-                              class="mx-2"
-                              dark
-                              color="ryu_orange"
-                              target="_blank"
-                              rel="noopener"
-                              :loading="isLoading"
-                              :href="`${downloadURL}-win_x64.zip`"
-                            >
-                              <v-icon class="mx-5">fab fa-windows</v-icon>
-                            </v-btn>
-                          </template>
-                          <span>{{ version }}</span>
-                        </v-tooltip>
-                        <v-tooltip top>
-                          <template v-slot:activator="{ on }">
-                            <v-btn
-                              v-on="on"
-                              class="mx-2"
-                              dark
-                              color="ryu_orange"
-                              target="_blank"
-                              rel="noopener"
-                              :loading="isLoading"
-                              :href="`${downloadURL}-linux_x64.tar.gz`"
-                            >
-                              <v-icon class="mx-5">fab fa-linux</v-icon>
-                            </v-btn>
-                          </template>
-                          <span>{{ version }}</span>
-                        </v-tooltip>
-                        <v-tooltip top>
-                          <template v-slot:activator="{ on }">
-                            <v-btn
-                              v-on="on"
-                              class="mx-2"
-                              dark
-                              color="ryu_orange"
-                              target="_blank"
-                              rel="noopener"
-                              :loading="isLoading"
-                              :href="`${downloadURL}-osx_x64.zip`"
-                            >
-                              <v-icon class="mx-5">fab fa-apple</v-icon>
-                            </v-btn>
-                          </template>
-                          <span>{{ version }}</span>
-                        </v-tooltip>
+
+                        <DownloadButton
+                          color="orange"
+                          platform="windows"
+                          :version="version"
+                          :href="`${downloadURL}-win_x64.zip`"
+                          :click="trackDownload"
+                          :loading="isLoading"
+                        />
+
+                        <DownloadButton
+                          color="orange"
+                          platform="linux"
+                          :version="version"
+                          :href="`${downloadURL}-linux_x64.tar.gz`"
+                          :click="trackDownload"
+                          :loading="isLoading"
+                        />
+
+                        <DownloadButton
+                          color="orange"
+                          platform="apple"
+                          :version="version"
+                          :href="`${downloadURL}-osx_x64.zip`"
+                          :click="trackDownload"
+                          :loading="isLoading"
+                        />
+                          
                         <br />
+
                         <v-btn
                           text
                           class="my-2"
@@ -83,6 +61,7 @@
                             src="https://ci.appveyor.com/api/projects/status/ssg4jwu6ve3k594s?svg=true"
                           />
                         </v-btn>
+
                         <p class="mt-4 title">
                           Profiled builds
                           <br />
@@ -90,69 +69,45 @@
                             class="caption"
                           >(If you're not a developer, these builds aren't for you.)</span>
                         </p>
+
                         <div class="text-center">
-                        <div v-if="showProfiledBuilds">
-                          <v-tooltip top>
-                            <template v-slot:activator="{ on }">
-                              <v-btn
-                                v-on="on"
-                                class="mx-2"
-                                dark
-                                color="ryu_blue"
-                                target="_blank"
-                                rel="noopener"
-                                :loading="isLoading"
-                                :href="`${downloadURL_profiled}-win_x64.zip`"
-                              >
-                                <v-icon class="mx-5">fab fa-windows</v-icon>
-                              </v-btn>
-                            </template>
-                            <span>{{ this.version }}</span>
-                          </v-tooltip>
-                          <v-tooltip top>
-                            <template v-slot:activator="{ on }">
-                              <v-btn
-                                v-on="on"
-                                class="mx-2"
-                                dark
-                                color="ryu_blue"
-                                target="_blank"
-                                rel="noopener"
-                                :loading="isLoading"
-                                :href="`${downloadURL_profiled}-linux_x64.tar.gz`"
-                              >
-                                <v-icon class="mx-5">fab fa-linux</v-icon>
-                              </v-btn>
-                            </template>
-                            <span>{{ this.version }}</span>
-                          </v-tooltip>
-                          <v-tooltip top>
-                            <template v-slot:activator="{ on }">
-                              <v-btn
-                                v-on="on"
-                                class="mx-2"
-                                dark
-                                color="ryu_blue"
-                                target="_blank"
-                                rel="noopener"
-                                :loading="isLoading"
-                                :href="`${downloadURL_profiled}-osx_x64.zip`"
-                              >
-                                <v-icon class="mx-5">fab fa-apple</v-icon>
-                              </v-btn>
-                            </template>
-                            <span>{{ this.version }}</span>
-                          </v-tooltip>
-                        </div>
-                        <div v-else>
-                          <v-btn
-                            dark
-                            color="ryu_orange"
-                            target="_blank"
-                            rel="noopener"
-                            @click.stop="showProfiledBuilds = true"
-                          >I know what I'm doing</v-btn>
-                        </div>
+                          <div v-if="showProfiledBuilds">
+                            <DownloadButton
+                              color="blue"
+                              platform="windows"
+                              :version="version"
+                              :href="`${downloadURL_profiled}-win_x64.zip`"
+                              :click="trackDownload"
+                              :loading="isLoading"
+                            />
+
+                            <DownloadButton
+                              color="blue"
+                              platform="linux"
+                              :version="version"
+                              :href="`${downloadURL_profiled}-linux_x64.tar.gz`"
+                              :click="trackDownload"
+                              :loading="isLoading"
+                            />
+
+                            <DownloadButton
+                              color="blue"
+                              platform="apple"
+                              :version="version"
+                              :href="`${downloadURL_profiled}-osx_x64.zip`"
+                              :click="trackDownload"
+                              :loading="isLoading"
+                            />
+                          </div>
+                          <div v-else>
+                            <v-btn
+                              dark
+                              color="ryu_orange"
+                              target="_blank"
+                              rel="noopener"
+                              @click.stop="showProfiledBuilds = true"
+                            >I know what I'm doing</v-btn>
+                          </div>
                         </div>
                       </v-col>
                     </v-row>
@@ -208,6 +163,14 @@ export default {
       this.downloadURL_profiled = `https://ci.appveyor.com/api/buildjobs/${jobIdProfiled}/artifacts/ryujinx-profiled-${this.version}`;
 
       this.isLoading = false;
+    },
+
+    trackDownload() {
+      this.$ga.event({
+        eventCategory: 'release',
+        eventAction: 'download',
+        eventLabel: this.version
+      });
     }
   },
 
