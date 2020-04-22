@@ -15,7 +15,7 @@
                         <p>
                           Download NET Core
                           <a
-                            href="https://dotnet.microsoft.com/download/dotnet-core/3.0"
+                            href="https://dotnet.microsoft.com/download/dotnet-core/3.1"
                             rel="noopener"
                             target="_blank"
                           >here</a>. Then install the SDK.
