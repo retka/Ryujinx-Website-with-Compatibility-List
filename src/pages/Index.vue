@@ -91,7 +91,7 @@
                   </v-card-title>
                   <v-card-text
                     class="text-center"
-                  >Ryujinx is capable of booting past menus to in-game on over 1,000 commercial titles, roughly half of which are considered playable. ​(we would keep this part uptodate monthly/quarterly)</v-card-text>
+                  >Ryujinx is capable of booting past menus to in-game on over 1,000 commercial titles, roughly half of which are considered playable.</v-card-text>
                 </v-card>
               </v-col>
             </v-row>
