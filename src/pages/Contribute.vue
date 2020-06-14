@@ -21,9 +21,7 @@
                     <v-row align="center" justify="center" class="hidden-sm-and-down">
                       <v-col cols="12" md="6">
                         <p class="mt-2">
-                          You may contribute if you have experience in C#, Switch Homebrew, image design, Discord management, etc.
-                          It doesn't matter what you're good at. If you have any skills that you think would be useful in the development,
-                          please do contact us through our Discord.
+                          If you have experience in C#, Switch Homebrew, graphic/website design, software quality assurance or beta testing, Discord management, or any other skills you think may be useful in helping the Ryujinx project, please contact us at our Discord server.
                         </p>
                       </v-col>
                       <v-col cols="12" md="6">

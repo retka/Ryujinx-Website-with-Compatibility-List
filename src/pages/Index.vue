@@ -26,13 +26,13 @@
 
                     <p
                       class="my-2"
-                    >It is an open source Nintendo Switch Emulator written in C# created by gdkchan.</p>
+                    >Ryujinx is an open-source Nintendo Switch emulator created by gdkchan and written in C#.</p>
                     <p
                       class="my-2"
-                    >This emulator aims at providing good performance and accuracy, a friendly interface, and consistent builds.</p>
+                    >This emulator aims at providing excellent accuracy and performance, a user-friendly interface, and consistent builds.</p>
                     <p
                       class="my-2"
-                    >Ryujinx is available on GitHub and is licensed under the "MIT" license.</p>
+                    >Ryujinx is available on GitHub under the MIT license.</p>
 
 
                     <div class="text-center">
@@ -64,9 +64,7 @@
                     <div class="display-1 text-center">Where can I grab it?</div>
                   </v-card-title>
                   <v-card-text class="text-center">
-                    As of right now, the emulator has no stable builds;
-                    although, you may follow the build guide by clicking the "Build" menu option above.
-                    Or you may download the latest pre-compiled build (above).
+                    You can download the latest pre-compiled build <router-link to="/download">here</router-link>, or you may build directly from the Ryujinx source code repository by following the guide <router-link to="/build">here</router-link>.
                   </v-card-text>
                 </v-card>
               </v-col>
@@ -89,11 +87,11 @@
                     <v-icon x-large class="--text text--lighten-2">fas fa-gamepad</v-icon>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
-                    <div class="display-1 text-center">Gaming?</div>
+                    <div class="display-1 text-center">How well does it work?</div>
                   </v-card-title>
                   <v-card-text
                     class="text-center"
-                  >Ryujinx boots lots of games, but almost none are playable, and won't be for a while.</v-card-text>
+                  >Ryujinx is capable of booting past menus to in-game on over 1,000 commercial titles, roughly half of which are considered playable. ​(we would keep this part uptodate monthly/quarterly)</v-card-text>
                 </v-card>
               </v-col>
             </v-row>
