@@ -30,12 +30,12 @@ export default function (Vue, { appOptions, head }) {
     theme: {
       themes: {
         light: {
-          ryu_blue: '#00C4E1',
-          ryu_orange: '#FF5E5B',
+          ryu_blue: '#02C5E5',
+          ryu_orange: '#FF5F55',
         },
         dark: {
-          ryu_blue: '#00C4E1',
-          ryu_orange: '#FF5E5B',
+          ryu_blue: '#02C5E5',
+          ryu_orange: '#FF5F55',
         }
       }
     },

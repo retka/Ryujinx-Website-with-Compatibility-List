@@ -60,9 +60,9 @@
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <slot />
-    </v-content>
+    </v-main>
     <v-navigation-drawer temporary v-model="drawer" fixed>
       <v-list>
         <!-- Index -->

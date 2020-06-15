@@ -42,13 +42,6 @@
                           The build directory is "root/bin/release/etc/etc."
                         </p>
                       </v-col>
-                      <v-col cols="12">
-                        <p class="mt-4 title">Step four:</p>
-                        <p>
-                          In order to run a game or homebrew; simply drag the file onto the Executable. The app will launch, and the homebrew/game will begin emulation.
-                          Do keep in mind, that emulation is finicky, and will most likely crash at some point.
-                        </p>
-                      </v-col>
                     </v-row>
                   </span>
                 </div>
