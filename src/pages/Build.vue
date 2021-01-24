@@ -38,7 +38,7 @@
                         <p>
                           Build the App using a Command prompt in the ROOT directory. You can quickly access it by Holding shift in explorer (in the Ryujinx directory) then right clicking,
                           and typing the following command
-                          <code>dotnet publish -c Release -r win10-x64</code>.
+                          <code>dotnet publish -c Release -r win-x64</code>.
                           The build directory is "root/bin/release/etc/etc."
                         </p>
                       </v-col>
