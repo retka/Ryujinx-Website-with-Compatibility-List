@@ -91,7 +91,7 @@
                   </v-card-title>
                   <v-card-text
                     class="text-center"
-                  >As of January 2021, Ryujinx has been tested on over 3,000 commercial titles: ~2,300 boot past menus and into gameplay, with approximately 1,500 of those being considered playable. See the compatibility list <router-link to="https://github.com/Ryujinx/Ryujinx-Games-List">here</router-link>.</v-card-text>
+                  >As of January 2021, Ryujinx has been tested on over 3,000 commercial titles: ~2,300 boot past menus and into gameplay, with approximately 1,500 of those being considered playable. See the compatibility list <a href="https://github.com/Ryujinx/Ryujinx-Games-List" rel="noopener" target="_blank">here</a>.</v-card-text>
                 </v-card>
               </v-col>
             </v-row>
@@ -125,7 +125,7 @@
                     <div class="display-1 text-center">Discord</div>
                   </v-card-title>
                   <v-card-text class="text-center">
-                    Join the <router-link to="https://discord.gg/VkQYXAZ">Ryujinx Discord server</router-link>! You can get help,
+                    Join the <a href="https://discord.gg/VkQYXAZ" rel="noopener" target="_blank">Ryujinx Discord server</a>! You can get help,
                     as well as converse with fellow users and developers.
                   </v-card-text>
                 </v-card>
