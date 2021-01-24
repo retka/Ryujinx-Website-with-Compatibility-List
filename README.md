@@ -7,6 +7,9 @@
 ## 2. Build Setup
 
 ``` bash
+# Workaround (see https://github.com/gridsome/gridsome/issues/1385)
+export VUE_CLI_BABEL_TRANSPILE_MODULES=true
+
 # install dependencies
 npm install
 

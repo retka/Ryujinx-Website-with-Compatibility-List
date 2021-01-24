@@ -10,29 +10,29 @@
     "deploy": "npm run build && npx purgecss --config purgecss.config.js --output dist/assets/css/ && npx babel -d dist dist"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.8.7",
-    "@gridsome/plugin-google-analytics": "^0.1.0",
-    "core-js": "^3.6.5",
-    "gridsome": "^0.7.17",
-    "vuetify": "^2.3.0"
+    "@babel/polyfill": "^7.12.1",
+    "@gridsome/plugin-google-analytics": "^0.1.2",
+    "core-js": "^3.8.3",
+    "gridsome": "^0.7.23",
+    "vuetify": "2.3.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "@gridsome/cli": "^0.3.3",
-    "@gridsome/plugin-sitemap": "^0.2.3",
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@gridsome/cli": "^0.3.4",
+    "@gridsome/plugin-sitemap": "^0.4.0",
     "babel-preset-minify": "^0.5.1",
     "deepmerge": "^4.2.2",
-    "eslint": "^6.8.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "eslint-plugin-vuetify": "^1.0.0-beta.6",
-    "fibers": "^4.0.2",
+    "eslint": "^7.18.0",
+    "eslint-plugin-vue": "^7.5.0",
+    "eslint-plugin-vuetify": "^1.0.0-beta.7",
+    "fibers": "^5.0.0",
     "gridsome-plugin-robots-txt": "^1.0.2",
-    "purgecss": "^2.1.0",
-    "sass": "^1.26.3",
+    "purgecss": "^4.0.0",
+    "sass": "^1.32.5",
     "sass-loader": "7.3.1",
-    "vuetify-loader": "^1.4.3",
-    "webpack-node-externals": "^1.7.2"
+    "vuetify-loader": "^1.6.0",
+    "webpack-node-externals": "^2.5.2"
   }
 }
