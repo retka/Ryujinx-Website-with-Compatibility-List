@@ -8,8 +8,10 @@
               <v-col cols="12" md="6">
                 <div class="text-center">
                   <p class="display-1">Building Ryujinx and latest downloads</p>
-                  <v-img :aspect-ratio="49/32" class="text-center" src="/public/shell.png" alt="Shell" />
                   <v-container>
+                    <v-row align="start" justify="center">
+                      <v-img :max-height="300" :max-width="500" position="text-center" src="/public/shell.png" alt="Shell" />
+                    </v-row>
                     <v-row align="start" justify="center">
                       <v-col>
                         <div class="text-h5">
@@ -63,6 +65,12 @@
                             Changelog
                           </v-btn>
                         </p>
+                      </v-col>
+                    </v-row>
+                    <v-row justify="center">
+                      <v-col>
+                        <p class="text-h5">Looking for the LDN build?</p>
+                        <p class="text">Head over to our <router-link to="https://www.patreon.com/ryujinx">Patreon</router-link> for more info & FREE download</p>
                       </v-col>
                     </v-row>
                     <v-row justify="center">

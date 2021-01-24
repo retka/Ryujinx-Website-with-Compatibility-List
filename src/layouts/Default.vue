@@ -177,11 +177,11 @@ export default {
   methods: {
     toggleDarkMode() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-      localStorage.dark_mode = this.$vuetify.theme.dark;
+      localStorage.white_mode = !this.$vuetify.theme.dark;
     }
   },
   beforeMount() {
-    this.$vuetify.theme.dark = localStorage.dark_mode === "true"
+    this.$vuetify.theme.dark = localStorage.white_mode !== "true"
   }
 };
 </script>
