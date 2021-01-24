@@ -91,8 +91,7 @@
                   </v-card-title>
                   <v-card-text
                     class="text-center"
-                  >Ryujinx is capable of booting past menus to in-game on over 1,500 commercial titles, with over half being considered playable. See the full
-                  list of compatible titles <router-link to="https://github.com/Ryujinx/Ryujinx-Games-List">here</router-link>.</v-card-text>
+                  >As of January 2021, Ryujinx has been tested on over 3,000 commercial titles: ~2,300 boot past menus and into gameplay, with approximately 1,500 of those being considered playable. See the compatibility list <router-link to="https://github.com/Ryujinx/Ryujinx-Games-List">here</router-link>.</v-card-text>
                 </v-card>
               </v-col>
             </v-row>
