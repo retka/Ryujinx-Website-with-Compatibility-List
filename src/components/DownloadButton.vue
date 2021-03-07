@@ -1,8 +1,8 @@
 <template>
-    <v-tooltip top>
+    <v-tooltip top :disabled="valid">
         <template v-slot:activator="{ on }">
+            <div v-on="on" class="d-inline-block">
             <v-btn
-                v-on="on"
                 class="mx-2"
                 dark
                 :color="`ryu_${color}`"
@@ -10,10 +10,12 @@
                 rel="noopener"
                 :loading="loading"
                 :href="href"
+                :disabled="disabled"
                 @click.once="click"
             >
                 <v-icon class="mx-5">fab fa-{{ platform }}</v-icon>
             </v-btn>
+            </div>
         </template>
         <span>{{ version }}</span>
     </v-tooltip>
@@ -27,7 +29,8 @@ export default {
         loading: Boolean,
         href: String,
         version: String,
-        click: Function
+        click: Function,
+        disabled: Boolean
     }
 }
 </script>

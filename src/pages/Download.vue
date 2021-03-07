@@ -40,6 +40,7 @@
                           :href="`${downloadURL}-win_x64.zip`"
                           :click="trackDownload"
                           :loading="isLoading"
+                          :disabled="false"
                         />
 
                         <DownloadButton
@@ -49,15 +50,17 @@
                           :href="`${downloadURL}-linux_x64.tar.gz`"
                           :click="trackDownload"
                           :loading="isLoading"
+                          :disabled="false"
                         />
 
                         <DownloadButton
                           color="orange"
                           platform="apple"
-                          :version="version"
+                          :version="macos_notice"
                           :href="`${downloadURL}-osx_x64.zip`"
                           :click="trackDownload"
                           :loading="isLoading"
+                          :disabled="true"
                         />
                           
                         <p class="mt-4">
@@ -109,7 +112,7 @@ export default {
       downloadURL: "",
       isLoading: true,
       version: "Loading ...",
-      showProfiledBuilds: false,
+      macos_notice: "Currently not supported (Support planned)",
       jobId_profiled: ""
     };
   },

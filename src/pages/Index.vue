@@ -113,7 +113,7 @@
                   </v-card-title>
                   <v-card-text
                     class="text-center"
-                  >Ryujinx is currently available for Windows, Linux, and macOS.</v-card-text>
+                  >Ryujinx is currently available for Windows and Linux (macOS support is planned).</v-card-text>
                 </v-card>
               </v-col>
               <v-col cols="12" md="4">
