@@ -143,7 +143,7 @@
                     In other words, a name for a Mythical (Sea-God) Dragon.
                     More information can be found here.
                     The name stems from Ryu (as already explained), then RyuJIT;
-                    which is the codename for the JIT compiler for Net Core.
+                    which is the codename for the JIT compiler for .NET Core.
                     The NX part of the name is from the Codename of the Switch itself.
                   </v-card-text>
                 </v-card>

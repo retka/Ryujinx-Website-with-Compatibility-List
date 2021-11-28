@@ -80,7 +80,7 @@
                       <v-col>
                         <p class="text-h5">Building methods</p>
                         <v-btn dark class="mx-2" color="ryu_blue" to="/build">
-                          <v-icon class="ml-n1 mr-2">fas fa-code</v-icon>.NET Core
+                          <v-icon class="ml-n1 mr-2">fas fa-code</v-icon>.NET
                         </v-btn>
                       </v-col>
                     </v-row>
