@@ -13,9 +13,9 @@
                       <v-col cols="12">
                         <p class="mt-4 title">Step one:</p>
                         <p>
-                          Download NET Core
+                          Download .NET 6
                           <a
-                            href="https://dotnet.microsoft.com/download/dotnet/5.0"
+                            href="https://dotnet.microsoft.com/download/dotnet/6.0"
                             rel="noopener"
                             target="_blank"
                           >here</a>. Then install the SDK.
@@ -24,7 +24,7 @@
                       <v-col cols="12" md="6">
                         <p class="mt-4 title">Step two (Variant one):</p>
                         <p>
-                          After the installation of the Net Core SDK is done; go ahead and copy the Clone link from GitHub from
+                          After the installation of the .NET SDK is done; go ahead and copy the Clone link from GitHub from
                           <a href="https://github.com/Ryujinx/Ryujinx" rel="noopener" target="_blank">here</a> (via Clone or Download --> Copy HTTPS Link. Or you can download the ZIP tarball.)
                           You can Git Clone the repo by using the GitBash, or you may use the second variant.
                         </p>
@@ -38,7 +38,7 @@
                         <p>
                           Build the App using a Command prompt in the ROOT directory. You can quickly access it by Holding shift in explorer (in the Ryujinx directory) then right clicking,
                           and typing the following command
-                          <code>dotnet publish -c Release -r win-x64</code>.
+                          <code>dotnet publish -c Release -r win-x64 --self-contained</code>.
                           The build directory is "root/bin/release/etc/etc."
                         </p>
                       </v-col>
