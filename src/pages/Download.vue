@@ -14,30 +14,16 @@
                     </v-row>
                     <v-row align="start" justify="center">
                       <v-col>
-                        <div class="text-h5">
-                          Automatically compiled builds
-                        </div>
-                        <p>
-                          <v-btn
-                            text
-                            small
-                            target="_blank"
-                            rel="noopener"
-                            href="https://ci.appveyor.com/project/gdkchan/ryujinx?branch=master"
-                          >
-                            <g-image
-                              width="140"
-                              src="https://ci.appveyor.com/api/projects/status/ssg4jwu6ve3k594s?svg=true"
-                              alt="AppVeyor Badge"
-                            />
-                          </v-btn>
-                        </p>
-
+                        <p class="text-h5">Automatically compiled builds</p>
+                      </v-col>
+                    </v-row>
+                    <v-row align="start" justify="center">
+                      <v-col>
                         <DownloadButton
                           color="orange"
                           platform="windows"
                           :version="version"
-                          :href="`${downloadURL}-win_x64.zip`"
+                          :href="`${winDownloadURL}`"
                           :click="trackDownload"
                           :loading="isLoading"
                           :disabled="false"
@@ -47,7 +33,7 @@
                           color="orange"
                           platform="linux"
                           :version="version"
-                          :href="`${downloadURL}-linux_x64.tar.gz`"
+                          :href="`${linuxDownloadURL}`"
                           :click="trackDownload"
                           :loading="isLoading"
                           :disabled="false"
@@ -57,7 +43,7 @@
                           color="orange"
                           platform="apple"
                           :version="macos_notice"
-                          :href="`${downloadURL}-osx_x64.zip`"
+                          :href="`${macDownloadURL}`"
                           :click="trackDownload"
                           :loading="isLoading"
                           :disabled="true"
@@ -66,6 +52,9 @@
                         <p class="mt-4">
                           <v-btn dark depressed small color="yellow darken-4" href="https://github.com/Ryujinx/Ryujinx/wiki/Changelog" rel="noopener" target="_blank">
                             Changelog
+                          </v-btn>
+                          <v-btn dark depressed small color="grey darken-4" href="https://github.com/Ryujinx/release-channel-master/releases" rel="noopener" target="_blank">
+                            Older Builds
                           </v-btn>
                         </p>
                       </v-col>
@@ -109,7 +98,9 @@ query {
 export default {
   data() {
     return {
-      downloadURL: "",
+      winDownloadURL: "",
+      linuxDownloadURL: "",
+      macDownloadURL: "",
       isLoading: true,
       version: "Loading ...",
       macos_notice: "Currently not supported (Support planned)",
@@ -122,15 +113,30 @@ export default {
       this.isLoading = true;
 
       let _f = await fetch(
-        "https://ci.appveyor.com/api/projects/gdkchan/ryujinx/branch/master"
+        "https://api.github.com/repos/Ryujinx/release-channel-master/releases/latest"
       );
       let json = await _f.json();
 
-      this.version = json.build.version;
+      for (var i = 0; i < json.assets.length; i++) {
+        var asset = json.assets[i];
 
-      const jobId = json.build.jobs[0].jobId;
+        // Ignore SDL2 headless for now (TODO: integrate that someday)
+        if (asset.name.startsWith("ryujinx-headless-sdl2"))
+        {
+          continue;
+        }
 
-      this.downloadURL = `https://ci.appveyor.com/api/buildjobs/${jobId}/artifacts/ryujinx-${this.version}`;
+        if (asset.name.endsWith("win_x64.zip"))
+        {
+          this.winDownloadURL = asset.browser_download_url;
+        }
+        if (asset.name.endsWith("linux_x64.tar.gz"))
+        {
+          this.linuxDownloadURL = asset.browser_download_url;
+        }
+      }
+
+      this.version = json.name;
 
       this.isLoading = false;
     },
