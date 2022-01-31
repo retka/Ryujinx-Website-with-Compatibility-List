@@ -21,7 +21,7 @@
                   <p class="display-1">What is Ryujinx?</p>
                   <span class="subheading">
                     <small>
-                      <em>(REE-YOU-JI-NX)</em>
+                      <em>(REE-YOU-JINX)</em>
                     </small>
 
                     <p
