@@ -120,8 +120,8 @@ export default {
       for (var i = 0; i < json.assets.length; i++) {
         var asset = json.assets[i];
 
-        // Ignore SDL2 headless for now (TODO: integrate that someday)
-        if (asset.name.startsWith("sdl2-") || asset.name.startsWith("ava-"))
+        // Ignore non standard version (TODO: Integrate that someday)
+        if (!asset.name.startsWith("ryujinx-"))
         {
           continue;
         }
