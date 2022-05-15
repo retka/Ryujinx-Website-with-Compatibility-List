@@ -121,7 +121,7 @@ export default {
         var asset = json.assets[i];
 
         // Ignore SDL2 headless for now (TODO: integrate that someday)
-        if (asset.name.startsWith("ryujinx-headless-sdl2"))
+        if (asset.name.startsWith("sdl2-") || asset.name.startsWith("ava-"))
         {
           continue;
         }
