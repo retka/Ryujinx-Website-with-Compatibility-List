@@ -3,7 +3,7 @@ module.exports = {
   siteUrl: 'https://ryujinx.org',
   titleTemplate: 'Ryujinx - %s',
   metadata: {
-    siteDescription: "Ryujinx is an open source Nintendo Switch emulator written in C# for Windows, Linux and macOS.",
+    siteDescription: "Ryujinx is an open source Nintendo Switch emulator written in C# for Windows and Linux.",
     siteKeywords: [
       "ryujinx",
       "switch",
