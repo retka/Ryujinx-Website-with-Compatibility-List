@@ -7,3 +7,5 @@ node_modules
 dist
 .env
 .env.*
+compatibility-list/importer/*.js
+compatibility-list/importer/*.js.map

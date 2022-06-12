@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "esnext",
+      "sourceMap": true,
+      "lib": ["esnext", "DOM"],
+      "moduleResolution": "nodenext"
+    }
+  }
