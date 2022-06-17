@@ -28,7 +28,6 @@ jobs:
       - run: echo "Generating provider for $TERRAFORM_ENV_NAME environment..."
       - run: |
           cd compatibility-list/infrastructure
-          ls
           python ./tf-provider-generate.py --var-file="./envs/$TERRAFORM_ENV_NAME.tfvars.json"
 
       - terraform/install: 
