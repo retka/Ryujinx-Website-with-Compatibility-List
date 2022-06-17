@@ -12,11 +12,13 @@ jobs:
   main:
     resource_class: small
     executor: aws-cli/default
+    working_directory: ~/project/compatibility-list/infrastructure
     steps:
       - checkout
 
       - run: ls
       - run: echo $(pwd)
+      
       - run: echo "Configuring AWS CLI and profile..."
       - aws-cli/setup:
           profile-name: default
@@ -26,13 +28,6 @@ jobs:
           source-profile: default
       - run: aws s3 ls --profile chrisdev_admin
       - run: echo "AWS CLI/Profile configuration complete."
-
-      - run: cd compatibility-list
-      - run: ls
-      - run: echo $(pwd)
-      - run: cd infrastructure
-      - run: ls
-      - run: echo $(pwd)
 
       - run: echo "Generating provider for $TERRAFORM_ENV_NAME environment..."
       - run: python ./tf-provider-generate.py --var-file="./envs/$TERRAFORM_ENV_NAME.tfvars.json"
