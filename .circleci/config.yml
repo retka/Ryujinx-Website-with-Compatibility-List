@@ -15,6 +15,8 @@ jobs:
     steps:
       - checkout
 
+      - run: ls
+      - echo ($pwd)
       - run: echo "Configuring AWS CLI and profile..."
       - aws-cli/setup:
           profile-name: default
@@ -26,6 +28,8 @@ jobs:
       - run: echo "AWS CLI/Profile configuration complete."
 
       - run: cd compatibility-list/infrastructure
+      - run: ls
+      - echo ($pwd)
 
       - run: echo "Generating provider for $TERRAFORM_ENV_NAME environment..."
       - run: python ./tf-provider-generate.py --var-file="./envs/$TERRAFORM_ENV_NAME.tfvars.json"
