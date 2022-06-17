@@ -12,13 +12,9 @@ jobs:
   main:
     resource_class: small
     executor: aws-cli/default
-    working_directory: ~/project/compatibility-list/infrastructure
     steps:
       - checkout
 
-      - run: ls
-      - run: echo $(pwd)
-      
       - run: echo "Configuring AWS CLI and profile..."
       - aws-cli/setup:
           profile-name: default
@@ -30,7 +26,7 @@ jobs:
       - run: echo "AWS CLI/Profile configuration complete."
 
       - run: echo "Generating provider for $TERRAFORM_ENV_NAME environment..."
-      - run: python ./tf-provider-generate.py --var-file="./envs/$TERRAFORM_ENV_NAME.tfvars.json"
+      - run: python ./compatibility-list/infrastructure/tf-provider-generate.py --var-file="./envs/$TERRAFORM_ENV_NAME.tfvars.json"
 
       - terraform/install: 
           arch: amd64
@@ -38,11 +34,15 @@ jobs:
           terraform_version: 1.2.2
 
       - run: echo "Running Terraform..."
-      - terraform/validate
-      - terraform/init
+      - terraform/validate: 
+          workspace-root: compatibility-list/infrastructure
+      - terraform/init: 
+          workspace-root: compatibility-list/infrastructure
       - terraform/plan: 
+          workspace-root: compatibility-list/infrastructure
           var_file: ./envs/$TERRAFORM_ENV_NAME.tfvars.json
       - terraform/apply: 
+          workspace-root: compatibility-list/infrastructure
           var_file: ./envs/$TERRAFORM_ENV_NAME.tfvars.json
           
       - run: echo "Terraform deploy complete."
