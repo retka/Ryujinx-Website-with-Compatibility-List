@@ -27,7 +27,7 @@ jobs:
       - run: aws s3 ls --profile chrisdev_admin
       - run: echo "AWS CLI/Profile configuration complete."
 
-      - run: compatibility-list
+      - run: cd compatibility-list
       - run: ls
       - run: echo $(pwd)
       - run: cd infrastructure
