@@ -35,14 +35,14 @@ jobs:
 
       - run: echo "Running Terraform..."
       - terraform/validate: 
-          workspace-root: compatibility-list/infrastructure
+          path: compatibility-list/infrastructure
       - terraform/init: 
-          workspace-root: compatibility-list/infrastructure
+          path: compatibility-list/infrastructure
       - terraform/plan: 
-          workspace-root: compatibility-list/infrastructure
+          path: compatibility-list/infrastructure
           var_file: ./envs/$TERRAFORM_ENV_NAME.tfvars.json
       - terraform/apply: 
-          workspace-root: compatibility-list/infrastructure
+          path: compatibility-list/infrastructure
           var_file: ./envs/$TERRAFORM_ENV_NAME.tfvars.json
           
       - run: echo "Terraform deploy complete."
