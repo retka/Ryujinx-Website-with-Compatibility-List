@@ -29,7 +29,7 @@ jobs:
       - run: |
           cd compatibility-list/infrastructure
           ls
-          python .tf-provider-generate.py --var-file="./envs/$TERRAFORM_ENV_NAME.tfvars.json"
+          python ./tf-provider-generate.py --var-file="./envs/$TERRAFORM_ENV_NAME.tfvars.json"
 
       - terraform/install: 
           arch: amd64
