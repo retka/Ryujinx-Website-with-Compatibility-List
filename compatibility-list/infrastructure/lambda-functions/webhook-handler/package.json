@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc && bestzip dist/bundle.zip dist/*.js",
+    "build": "tsc && cd dist && bestzip ./bundle.zip ../package.json *.js *.js.map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
