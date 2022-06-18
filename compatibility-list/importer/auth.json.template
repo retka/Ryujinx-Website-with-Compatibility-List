@@ -1,0 +1,8 @@
+{
+  "gitHub": {
+    "personalAccessToken": ""
+  },
+  "aws": {
+    "profile": ""
+  }
+}
